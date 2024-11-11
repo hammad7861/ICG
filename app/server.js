@@ -3,25 +3,17 @@ const connectDataBase = require("./config/dataBaseConnection");
 const appPort = require("./config").get("appPort");
 
 process.on("uncaughtException", (error) => {
-  console.log("uncaughtException", error);
-
-  // TODO : send email to admin to notify about error
-  setTimeout(() => {
-    process.exit(1);
-  }, 1500);
+  console.error("Uncaught Exception:", error);
+  setTimeout(() => process.exit(1), 1500);
 });
 
-process.on("unhandledRejection", (error) => {
-  console.log("unhandledRejection", error);
-
-  // TODO : send email to admin to notify about error
-  setTimeout(() => {
-    process.exit(1);
-  }, 1500);
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("Unhandled Rejection at:", promise, "reason:", reason);
+  setTimeout(() => process.exit(1), 1500);
 });
 
 connectDataBase();
 
-app.listen(appPort || 8080, () => {
+app.listen(appPort || 3000, () => {
   console.log(`ICG server running on port ${appPort} `);
 });

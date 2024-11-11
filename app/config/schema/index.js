@@ -27,4 +27,10 @@ module.exports = convict({
     default: "mongodb://localhost:27017/",
     env: "DATABASE_URL",
   },
+  jwtKey: {
+    doc: "The secret key used for signing and verifying JSON Web Tokens (JWT). This key should be kept secure as it ensures the integrity and authenticity of tokens.",
+    format: String,
+    default: "",
+    env: "JWT_KEY",
+  },
 });
