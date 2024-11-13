@@ -1,13 +1,19 @@
 const path = require("path");
 const userRouter = require("express").Router();
 const {
-  users: { createUserController, getUserController, getUsersController },
+  users: {
+    createUserController,
+    getUserController,
+    getUsersController,
+    updateUserController,
+  },
 } = require("../../controllers");
 const {
   users: {
     createUserValidationSchema,
     getUserValidationSchema,
     getUsersValidationSchema,
+    updateUserValidationSchema,
   },
 } = require("../../validators/");
 const {
@@ -42,6 +48,13 @@ userRouter.post(
   profileUpload.single("profileImage"),
   [validateInputs(createUserValidationSchema), sanitizeInputs()],
   createUserController.createUser
+);
+
+userRouter.put(
+  "/:userId",
+  profileUpload.single("profileImage"),
+  [validateInputs(updateUserValidationSchema), sanitizeInputs()],
+  updateUserController.updateUser
 );
 
 module.exports = userRouter;

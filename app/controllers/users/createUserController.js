@@ -1,4 +1,3 @@
-const moment = require("moment");
 const {
   users: {
     createUserControllerQueries: { createUser },
@@ -28,7 +27,7 @@ const createUserController = {
 
       await createUser(userData);
 
-      successResponse(res, 200, "User created sucessfully");
+      successResponse(res, 200, "User created successfully");
     } catch (error) {
       console.error("ERROR IN CREATE USER CONTROLLER", error);
       return next(error);
