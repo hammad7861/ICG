@@ -1,26 +1,25 @@
 const express = require("express");
-const helment = require("helmet");
+const helmet = require("helmet");
+const cors = require("cors");
+const path = require("path");
 const {
   errorHandler,
   routeNotFoundHandler,
   expressLoggerHandler,
 } = require("./middlewares");
-require("./models");
-const cors = require("cors");
-const app = express();
 const router = require("./routes");
+require("./models");
 
-// For parsing the data
+const app = express();
+
+// Serve static assets (images) from the "assets" folder and its subdirectories
+app.use("/assets", express.static(path.join(__dirname, "..", "assets")));
+
+// Middleware setup
 app.use(express.urlencoded({ extended: false, limit: "10mb" }));
 app.use(express.json({ limit: "10mb" }));
-
-// To change to the frontend url then
 app.use(cors());
-
-//for security
-app.use(helment());
-
-// logger
+app.use(helmet());
 app.use(expressLoggerHandler);
 
 // Test route
@@ -28,13 +27,11 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "Hello" });
 });
 
-// Route
+// API routes
 app.use("/api", router);
 
-// catch 404
+// 404 and error handling
 app.use(routeNotFoundHandler);
-
-// error handling
 app.use(errorHandler);
 
 module.exports = app;
