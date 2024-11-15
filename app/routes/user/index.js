@@ -1,5 +1,7 @@
 const path = require("path");
 const userRouter = require("express").Router();
+
+// controllers
 const {
   users: {
     createUserController,
@@ -9,6 +11,8 @@ const {
     deleteUserController,
   },
 } = require("../../controllers");
+
+// validators
 const {
   users: {
     createUserValidationSchema,
@@ -18,17 +22,19 @@ const {
     deleteUserValidationSchema,
   },
 } = require("../../validators/");
+
+// middlewares
 const {
   validateInputs,
   sanitizeInputs,
   paginationFormula,
 } = require("../../middlewares");
 const createMulterConfig = require("../../config/multerConfig");
-
 const profileUpload = createMulterConfig(
   path.resolve("assets/images/profiles")
 );
 
+// routes
 userRouter.get(
   "/",
   [
