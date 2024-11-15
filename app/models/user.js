@@ -15,7 +15,6 @@ const UserSchema = new Schema(
     email: {
       type: String,
       required: true,
-      unique: true,
       trim: true,
       lowercase: true,
       match: [
@@ -32,6 +31,10 @@ const UserSchema = new Schema(
       type: Boolean,
       default: false,
     },
+    deletedAt: {
+      type: Date,
+      default: null,
+    },
     passwordResetToken: {
       type: String,
       required: false,
@@ -46,7 +49,7 @@ const UserSchema = new Schema(
   }
 );
 
-UserSchema.index({ email: 1, archived: 1 }, { unique: true });
+UserSchema.index({ email: 1, archived: 1, deletedAt: 1 }, { unique: true });
 
 const User = mongoose.model("User", UserSchema);
 

@@ -1,6 +1,9 @@
 const Joi = require("joi");
 
 const updateUserValidationSchema = {
+  params: Joi.object({
+    userId: Joi.string().alphanum().length(24).required(),
+  }),
   body: Joi.object({
     name: Joi.string().required(),
     email: Joi.string().email().required(),

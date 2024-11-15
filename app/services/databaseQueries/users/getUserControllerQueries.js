@@ -2,7 +2,10 @@ const { User } = require("../../../models");
 
 const getUserControllerQueries = {
   async getUser(userId) {
-    return User.findById(userId, "name email profileImage");
+    return User.findOne(
+      { _id: userId, archived: false },
+      "name email profileImage"
+    );
   },
 };
 

@@ -2,7 +2,10 @@ const { User } = require("../../../models");
 
 const getUsersControllerQueries = {
   async getUsers(limit, skip) {
-    const users = await User.find({}, "name email profileImage")
+    const users = await User.find(
+      { archived: false },
+      "name email profileImage"
+    )
       .skip(skip)
       .limit(limit)
       .exec();

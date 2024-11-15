@@ -6,6 +6,7 @@ const {
     getUserController,
     getUsersController,
     updateUserController,
+    deleteUserController,
   },
 } = require("../../controllers");
 const {
@@ -14,6 +15,7 @@ const {
     getUserValidationSchema,
     getUsersValidationSchema,
     updateUserValidationSchema,
+    deleteUserValidationSchema,
   },
 } = require("../../validators/");
 const {
@@ -55,6 +57,12 @@ userRouter.put(
   profileUpload.single("profileImage"),
   [validateInputs(updateUserValidationSchema), sanitizeInputs()],
   updateUserController.updateUser
+);
+
+userRouter.delete(
+  "/:userId",
+  [validateInputs(deleteUserValidationSchema), sanitizeInputs()],
+  deleteUserController.deleteUser
 );
 
 module.exports = userRouter;
