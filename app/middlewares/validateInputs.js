@@ -24,6 +24,12 @@ const validateInputs = (validationSchema) => {
 
     if (fileError) return next(fileError);
 
+    const { error: filesError } = validationSchema.files
+      ? validationSchema.files.validate(req.files)
+      : {};
+
+    if (filesError) return next(filesError);
+
     next();
   };
 };

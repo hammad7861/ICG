@@ -30,9 +30,10 @@ const {
   paginationFormula,
 } = require("../../middlewares");
 const createMulterConfig = require("../../config/multerConfig");
-const profileUpload = createMulterConfig(
-  path.resolve("assets/images/profiles")
-);
+const uploadPaths = {
+  profileImage: path.resolve("assets/images/profiles"),
+};
+const profileUpload = createMulterConfig(uploadPaths);
 
 // routes
 userRouter.get(
