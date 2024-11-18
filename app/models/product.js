@@ -6,7 +6,6 @@ const ProductSchema = new Schema(
     cas_no: {
       type: String,
       required: true,
-      unique: true,
       trim: true,
     },
     chemical_name: {
@@ -68,11 +67,17 @@ const ProductSchema = new Schema(
       type: Boolean,
       default: false,
     },
+    deletedAt: {
+      type: Date,
+      default: null,
+    },
   },
   {
     timestamps: true,
   }
 );
+
+ProductSchema.index({ cas_no: 1, archived: 1, deletedAt: 1 }, { unique: true });
 
 const Product = mongoose.model("Product", ProductSchema);
 

@@ -1,4 +1,5 @@
 const Joi = require("joi");
+const { ALLOWED_MIME_TYPES } = require("../../constants");
 
 const updateUserValidationSchema = {
   params: Joi.object({
@@ -11,15 +12,7 @@ const updateUserValidationSchema = {
   file: Joi.object({
     originalname: Joi.string().required(),
     mimetype: Joi.string()
-      .valid(
-        "image/jpeg",
-        "image/png",
-        "image/gif",
-        "image/webp",
-        "image/bmp",
-        "image/tiff",
-        "image/svg+xml"
-      )
+      .valid(...ALLOWED_MIME_TYPES.profileImage)
       .required(),
     fieldname: Joi.string().valid("profileImage").required(),
     encoding: Joi.string().required(),

@@ -2,13 +2,16 @@ const { errorResponse, deleteFiles } = require("../utils");
 const { CustomErrorHandler } = require("../services");
 
 const errorHandler = (err, req, res, next) => {
-  const files = req.file ? [req.file] : req.files || [];
+  const files = req.file
+    ? [req.file]
+    : req.files
+      ? Object.values(req.files).flat()
+      : [];
 
   deleteFiles(files);
 
-  if (err instanceof CustomErrorHandler) {
+  if (err instanceof CustomErrorHandler)
     return errorResponse(res, err.statusCode, err.message);
-  }
 
   return errorResponse(
     res,

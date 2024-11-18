@@ -26,17 +26,22 @@ const updateUserController = {
         const emailExists = await emailExits(email);
 
         if (emailExists)
-          throw CustomErrorHandler.customClientMessage("Email already exits");
+          throw CustomErrorHandler.customClientMessage("Email already exists");
       }
 
-      const profileImagePath = getAssetPath(
-        ASSET_URL_TYPE.userProfileImage,
-        user.profileImage
-      );
+      const updatePayload = { name, email };
+      if (filename) {
+        updatePayload.profileImage = filename;
 
-      await updateUser(userId, { name, email, profileImage: filename });
+        const profileImagePath = getAssetPath(
+          ASSET_URL_TYPE.userProfileImage,
+          user.profileImage
+        );
 
-      deleteFiles([{ path: profileImagePath }]);
+        deleteFiles([{ path: profileImagePath }]);
+      }
+
+      await updateUser(userId, updatePayload);
 
       successResponse(res, 200, "User updated successfully");
     } catch (error) {

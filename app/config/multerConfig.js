@@ -2,15 +2,25 @@ const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
 const moment = require("moment");
+const { ALLOWED_MIME_TYPES } = require("../constants");
 
-const createMulterConfig = (uploadPath) => {
-  if (!fs.existsSync(uploadPath)) {
-    fs.mkdirSync(uploadPath, { recursive: true });
-  }
+const createMulterConfig = (uploadPaths) => {
+  Object.values(uploadPaths).forEach((uploadPath) => {
+    if (!fs.existsSync(uploadPath)) {
+      fs.mkdirSync(uploadPath, { recursive: true });
+    }
+  });
 
   const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, uploadPath);
+      const uploadPath = uploadPaths[file.fieldname];
+      if (uploadPath) {
+        cb(null, uploadPath);
+      } else {
+        cb(
+          new Error(`No upload path defined for fieldname: ${file.fieldname}`)
+        );
+      }
     },
     filename: (req, file, cb) => {
       const fileName =
@@ -23,20 +33,11 @@ const createMulterConfig = (uploadPath) => {
   });
 
   const fileFilter = (req, file, cb) => {
-    const allowedMimes = [
-      "image/jpeg",
-      "image/png",
-      "image/gif",
-      "image/webp",
-      "image/bmp",
-      "image/tiff",
-      "image/svg+xml",
-    ];
-
-    if (allowedMimes.includes(file.mimetype)) {
+    const validMimes = ALLOWED_MIME_TYPES[file.fieldname];
+    if (validMimes && validMimes.includes(file.mimetype)) {
       cb(null, true);
     } else {
-      cb(new Error("Invalid file type"), false);
+      cb(new Error(`Invalid file type for field: ${file.fieldname}`), false);
     }
   };
 
@@ -44,7 +45,7 @@ const createMulterConfig = (uploadPath) => {
     storage,
     fileFilter,
     limits: {
-      fileSize: 5 * 1024 * 1024, // 5MB
+      fileSize: 5 * 1024 * 1024,
     },
   });
 };
