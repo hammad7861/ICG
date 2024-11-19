@@ -1,6 +1,7 @@
 exports.ASSET_URL_TYPE = {
   userProfileImage: "User Profile Image",
   productBannerImage: "Product Banner Image",
+  eventBannerImage: "Event Banner Image",
   productMSDSDocument: "Product MSDS Document",
   productTDSDocument: "Product TDS Document",
 };
