@@ -1,8 +1,9 @@
 const { ASSET_URL_TYPE } = require("../../constants");
+const { Event } = require("../../models");
 const {
-  events: {
-    deleteEventControllerQueries: { deleteEvent },
-    getEventControllerQueries: { getEvent },
+  common: {
+    getOneControllerQueries: { getOne },
+    deleteControllerQueries: { deleteRecord },
   },
   CustomErrorHandler,
 } = require("../../services");
@@ -15,7 +16,7 @@ const deleteEventController = {
         sanitizedParams: { eventId },
       } = req;
 
-      const event = await getEvent(eventId);
+      const event = await getOne(Event, eventId);
 
       if (!event) throw CustomErrorHandler.notFound("Event");
 
@@ -24,7 +25,7 @@ const deleteEventController = {
         event.banner
       );
 
-      await deleteEvent(eventId);
+      await deleteRecord(Event, eventId);
 
       deleteFiles([{ path: bannerImagePath }]);
 

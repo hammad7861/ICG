@@ -1,8 +1,9 @@
 const { ASSET_URL_TYPE } = require("../../constants");
+const { User } = require("../../models");
 const {
-  users: {
-    deleteUserControllerQueries: { deleteUser },
-    getUserControllerQueries: { getUser },
+  common: {
+    getOneControllerQueries: { getOne },
+    deleteControllerQueries: { deleteRecord },
   },
   CustomErrorHandler,
 } = require("../../services");
@@ -15,7 +16,7 @@ const deleteUserController = {
         sanitizedParams: { userId },
       } = req;
 
-      const user = await getUser(userId);
+      const user = await getOne(User, userId);
 
       if (!user) throw CustomErrorHandler.notFound("User");
 
@@ -24,7 +25,7 @@ const deleteUserController = {
         user.profileImage
       );
 
-      await deleteUser(userId);
+      await deleteRecord(User, userId);
 
       deleteFiles([{ path: profileImagePath }]);
 

@@ -1,6 +1,7 @@
+const { Product } = require("../../models");
 const {
-  products: {
-    createProductControllerQueries: { createProduct },
+  common: {
+    createControllerQueries: { create },
   },
 } = require("../../services");
 const { successResponse } = require("../../utils");
@@ -44,7 +45,7 @@ const createProductController = {
         published,
       };
 
-      await createProduct(productData);
+      await create(Product, productData);
 
       successResponse(res, 200, "Product created successfully");
     } catch (error) {

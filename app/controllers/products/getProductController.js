@@ -1,7 +1,8 @@
 const { ASSET_URL_TYPE } = require("../../constants");
+const { Product } = require("../../models");
 const {
-  products: {
-    getProductControllerQueries: { getProduct },
+  common: {
+    getOneControllerQueries: { getOne },
   },
   CustomErrorHandler,
 } = require("../../services");
@@ -12,7 +13,7 @@ const getProductController = {
     try {
       const { productId } = req.sanitizedParams;
 
-      let product = await getProduct(productId);
+      let product = await getOne(Product, productId, "-deletedAt");
 
       if (!product) throw CustomErrorHandler.notFound("Product");
 

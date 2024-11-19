@@ -1,7 +1,11 @@
+const bcrypt = require("bcrypt");
+const { User } = require("../../models");
 const {
   users: {
-    createUserControllerQueries: { createUser },
     commonUserControllerQueries: { emailExits },
+  },
+  common: {
+    createControllerQueries: { create },
   },
   CustomErrorHandler,
 } = require("../../services");
@@ -18,14 +22,16 @@ const createUserController = {
       if (emailExists)
         throw CustomErrorHandler.customClientMessage("Email already exits");
 
+      const hashedPassword = await bcrypt.hash(password, 10);
+
       const userData = {
         profileImage: filename,
         name,
         email,
-        password,
+        password: hashedPassword,
       };
 
-      await createUser(userData);
+      await create(User, userData);
 
       successResponse(res, 200, "User created successfully");
     } catch (error) {

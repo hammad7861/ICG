@@ -1,7 +1,8 @@
 const { ASSET_URL_TYPE } = require("../../constants");
+const { Event } = require("../../models");
 const {
-  events: {
-    getEventControllerQueries: { getEvent },
+  common: {
+    getOneControllerQueries: { getOne },
   },
   CustomErrorHandler,
 } = require("../../services");
@@ -12,7 +13,7 @@ const getEventController = {
     try {
       const { eventId } = req.sanitizedParams;
 
-      let event = await getEvent(eventId);
+      let event = await getOne(Event, eventId);
 
       if (!event) throw CustomErrorHandler.notFound("Event");
 
