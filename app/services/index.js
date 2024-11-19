@@ -4,6 +4,7 @@ const JwtServices = require("./JwtServices");
 const objectSanitization = require("./objectSanitization");
 const users = require("./databaseQueries/users");
 const products = require("./databaseQueries/products");
+const events = require("./databaseQueries/events");
 const userQuery = require("./databaseQueries/userQuery");
 const userUpdate = require("./databaseQueries/userUpdate");
 
@@ -15,5 +16,6 @@ module.exports = {
   users,
   userQuery,
   userUpdate,
+  events,
   products,
 };

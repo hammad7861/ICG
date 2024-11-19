@@ -29,8 +29,6 @@ const EventSchema = new Schema(
     status: {
       type: String,
       required: true,
-      enum: ["scheduled", "ongoing", "completed", "cancelled"],
-      default: "scheduled",
     },
     comments: {
       type: String,

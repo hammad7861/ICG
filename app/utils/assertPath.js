@@ -4,6 +4,8 @@ function getAssetPath(assetType, assetName) {
       return `../assets/images/profiles/${assetName}`;
     case "Product Banner Image":
       return `../assets/images/products/banners/${assetName}`;
+    case "Event Banner Image":
+      return `../assets/images/events/banners/${assetName}`;
     case "Product MSDS Document":
       return `../assets/documents/products/msds/${assetName}`;
     case "Product TDS Document":

@@ -2,6 +2,9 @@ const Joi = require("joi");
 const { ALLOWED_MIME_TYPES } = require("../../constants");
 
 const updateProductValidationSchema = {
+  params: Joi.object({
+    productId: Joi.string().alphanum().length(24).required(),
+  }),
   body: Joi.object({
     casNo: Joi.string().required(),
     chemicalName: Joi.string().required(),
