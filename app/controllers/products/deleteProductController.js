@@ -1,8 +1,9 @@
 const { ASSET_URL_TYPE } = require("../../constants");
+const { Product } = require("../../models");
 const {
-  products: {
-    deleteProductControllerQueries: { deleteProduct },
-    getProductControllerQueries: { getProduct },
+  common: {
+    getOneControllerQueries: { getOne },
+    deleteControllerQueries: { deleteRecord },
   },
   CustomErrorHandler,
 } = require("../../services");
@@ -15,7 +16,7 @@ const deleteProductController = {
         sanitizedParams: { productId },
       } = req;
 
-      const product = await getProduct(productId);
+      const product = await getOne(Product, productId);
 
       if (!product) throw CustomErrorHandler.notFound("Product");
 
@@ -29,7 +30,7 @@ const deleteProductController = {
         { path: getAssetPath(ASSET_URL_TYPE.productTDSDocument, product.TDS) },
       ];
 
-      await deleteProduct(productId);
+      await deleteRecord(Product, productId);
 
       deleteFiles(filePathsToDelete);
 

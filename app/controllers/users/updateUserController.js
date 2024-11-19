@@ -1,9 +1,12 @@
 const { ASSET_URL_TYPE } = require("../../constants");
+const { User } = require("../../models");
 const {
   users: {
-    updateUserControllerQueries: { updateUser },
-    getUserControllerQueries: { getUser },
     commonUserControllerQueries: { emailExits },
+  },
+  common: {
+    updateControllerQueries: { update },
+    getOneControllerQueries: { getOne },
   },
   CustomErrorHandler,
 } = require("../../services");
@@ -18,7 +21,7 @@ const updateUserController = {
         sanitizedParams: { userId },
       } = req;
 
-      const user = await getUser(userId);
+      const user = await getOne(User, userId);
 
       if (!user) throw CustomErrorHandler.notFound("User");
 
@@ -41,7 +44,7 @@ const updateUserController = {
         deleteFiles([{ path: profileImagePath }]);
       }
 
-      await updateUser(userId, updatePayload);
+      await update(User, userId, updatePayload);
 
       successResponse(res, 200, "User updated successfully");
     } catch (error) {

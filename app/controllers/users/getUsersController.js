@@ -1,7 +1,8 @@
 const { ASSET_URL_TYPE } = require("../../constants");
+const { User } = require("../../models");
 const {
-  users: {
-    getUsersControllerQueries: { getUsers },
+  common: {
+    getAllControllerQueries: { getAll },
   },
 } = require("../../services");
 const {
@@ -15,7 +16,12 @@ const getUsersController = {
     try {
       const { page, limit, skip } = req.paginationValues;
 
-      let { users, count } = await getUsers(limit, skip);
+      let { records: users, count } = await getAll(
+        User,
+        limit,
+        skip,
+        "-deletedAt -password -archived"
+      );
 
       const totalPages = calculateTotalPages(count, limit);
 

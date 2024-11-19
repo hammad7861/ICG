@@ -1,8 +1,8 @@
+const { Event } = require("../../models");
 const {
-  events: {
-    createEventControllerQueries: { createEvent },
+  common: {
+    createControllerQueries: { create },
   },
-  CustomErrorHandler,
 } = require("../../services");
 const { successResponse } = require("../../utils");
 
@@ -23,7 +23,7 @@ const createEventController = {
         comments,
       };
 
-      await createEvent(eventData);
+      await create(Event, eventData);
 
       successResponse(res, 200, "Event created successfully");
     } catch (error) {

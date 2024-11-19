@@ -1,7 +1,8 @@
 const { ASSET_URL_TYPE } = require("../../constants");
+const { User } = require("../../models");
 const {
-  users: {
-    getUserControllerQueries: { getUser },
+  common: {
+    getOneControllerQueries: { getOne },
   },
   CustomErrorHandler,
 } = require("../../services");
@@ -12,7 +13,7 @@ const getUserController = {
     try {
       const { userId } = req.sanitizedParams;
 
-      let user = await getUser(userId);
+      let user = await getOne(User, userId, "-deletedAt -password -archived");
 
       if (!user) throw CustomErrorHandler.notFound("User");
 

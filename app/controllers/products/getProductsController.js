@@ -1,7 +1,8 @@
 const { ASSET_URL_TYPE } = require("../../constants");
+const { Product } = require("../../models");
 const {
-  products: {
-    getProductsControllerQueries: { getProducts },
+  common: {
+    getAllControllerQueries: { getAll },
   },
 } = require("../../services");
 const {
@@ -15,7 +16,12 @@ const getProductsController = {
     try {
       const { page, limit, skip } = req.paginationValues;
 
-      let { products, count } = await getProducts(limit, skip);
+      let { records: products, count } = await getAll(
+        Product,
+        limit,
+        skip,
+        "-deletedAt"
+      );
 
       const totalPages = calculateTotalPages(count, limit);
 

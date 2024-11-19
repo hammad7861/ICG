@@ -1,8 +1,9 @@
 const { ASSET_URL_TYPE } = require("../../constants");
+const { Event } = require("../../models");
 const {
-  events: {
-    updateEventControllerQueries: { updateEvent },
-    getEventControllerQueries: { getEvent },
+  common: {
+    updateControllerQueries: { update },
+    getOneControllerQueries: { getOne },
   },
   CustomErrorHandler,
 } = require("../../services");
@@ -24,7 +25,7 @@ const updateEventController = {
         sanitizedParams: { eventId },
       } = req;
 
-      const event = await getEvent(eventId);
+      const event = await getOne(Event, eventId);
 
       if (!event) throw CustomErrorHandler.notFound("Event");
 
@@ -37,10 +38,6 @@ const updateEventController = {
         comments,
       };
 
-      console.log({ updatePayload });
-
-      console.log({ filename });
-
       if (filename) {
         updatePayload.banner = filename;
 
@@ -52,7 +49,7 @@ const updateEventController = {
         deleteFiles([{ path: bannerImagePath }]);
       }
 
-      await updateEvent(eventId, updatePayload);
+      await update(Event, eventId, updatePayload);
 
       successResponse(res, 200, "Event updated successfully");
     } catch (error) {

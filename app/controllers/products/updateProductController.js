@@ -1,8 +1,9 @@
 const { ASSET_URL_TYPE } = require("../../constants");
+const { Product } = require("../../models");
 const {
-  products: {
-    updateProductControllerQueries: { updateProduct },
-    getProductControllerQueries: { getProduct },
+  common: {
+    updateControllerQueries: { update },
+    getOneControllerQueries: { getOne },
   },
   CustomErrorHandler,
 } = require("../../services");
@@ -28,7 +29,7 @@ const updateProductController = {
         sanitizedParams: { productId },
       } = req;
 
-      const product = await getProduct(productId);
+      const product = await getOne(Product, productId);
 
       if (!product) throw CustomErrorHandler.notFound("Product");
 
@@ -86,7 +87,7 @@ const updateProductController = {
         deleteFiles(filePathsToDelete);
       }
 
-      await updateProduct(productId, uploadPayload);
+      await update(Product, productId, uploadPayload);
 
       successResponse(res, 200, "Product updated successfully");
     } catch (error) {
