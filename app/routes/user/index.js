@@ -21,7 +21,7 @@ const {
     updateUserValidationSchema,
     deleteUserValidationSchema,
   },
-} = require("../../validators/");
+} = require("../../validators");
 
 // middlewares
 const {

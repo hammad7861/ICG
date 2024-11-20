@@ -23,7 +23,7 @@ const {
     deleteProductValidationSchema,
     publishProductValidationSchema,
   },
-} = require("../../validators/");
+} = require("../../validators");
 
 // middlewares
 const {

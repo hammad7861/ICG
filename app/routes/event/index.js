@@ -21,7 +21,7 @@ const {
     updateEventValidationSchema,
     deleteEventValidationSchema,
   },
-} = require("../../validators/");
+} = require("../../validators");
 
 // middlewares
 const {
