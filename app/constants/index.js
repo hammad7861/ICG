@@ -2,6 +2,7 @@ exports.ASSET_URL_TYPE = {
   userProfileImage: "User Profile Image",
   productBannerImage: "Product Banner Image",
   eventBannerImage: "Event Banner Image",
+  mediaAndNewsBannerImage: "Media And News Banner Image",
   productMSDSDocument: "Product MSDS Document",
   productTDSDocument: "Product TDS Document",
 };
@@ -36,3 +37,13 @@ exports.ALLOWED_MIME_TYPES = {
   MSDS: exports.ALLOWED_FILE_TYPES.PDF,
   TDS: exports.ALLOWED_FILE_TYPES.PDF,
 };
+
+exports.MEDIA_AND_NEWS_TYPES = {
+  NEWS_ANNOUNCEMENT: "News Announcement",
+  PRESS_RELEASE: "Press Release",
+};
+
+exports.ALLOWED_MEDIA_AND_NEWS_TYPES = [
+  exports.MEDIA_AND_NEWS_TYPES.NEWS_ANNOUNCEMENT,
+  exports.MEDIA_AND_NEWS_TYPES.PRESS_RELEASE,
+];

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { ALLOWED_MEDIA_AND_NEWS_TYPES } = require("../constants");
 const { Schema } = mongoose;
 
 const MediaAndNewsSchema = new Schema(
@@ -20,7 +21,7 @@ const MediaAndNewsSchema = new Schema(
     type: {
       type: String,
       required: true,
-      enum: ["news", "media", "press_release"],
+      enum: [...ALLOWED_MEDIA_AND_NEWS_TYPES],
       trim: true,
     },
     archived: {
@@ -29,12 +30,10 @@ const MediaAndNewsSchema = new Schema(
     },
     name: {
       type: String,
-      required: true,
       trim: true,
     },
     email: {
       type: String,
-      required: true,
       trim: true,
       lowercase: true,
       match: [
@@ -48,7 +47,6 @@ const MediaAndNewsSchema = new Schema(
     },
     content: {
       type: String,
-      required: true,
     },
     banner: {
       type: String,
