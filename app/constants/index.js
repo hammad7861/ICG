@@ -11,6 +11,21 @@ exports.ASSET_URL_TYPE = {
   productTDSDocument: "Product TDS Document",
 };
 
+exports.ASSET_PATH_MAPPING = {
+  [exports.ASSET_URL_TYPE.userProfileImage]: "images/profiles",
+  [exports.ASSET_URL_TYPE.productBannerImage]: "images/products/banners",
+  [exports.ASSET_URL_TYPE.eventBannerImage]: "images/events/banners",
+  [exports.ASSET_URL_TYPE.mediaAndNewsBannerImage]:
+    "images/mediaAndNews/banners",
+  [exports.ASSET_URL_TYPE.articleBannerImage]: "images/articles/banners",
+  [exports.ASSET_URL_TYPE.artcileAttachmentDocument]:
+    "documents/articles/attachments",
+  [exports.ASSET_URL_TYPE.blogBannerImage]: "images/blogs/banners",
+  [exports.ASSET_URL_TYPE.blogFeaturedImage]: "images/blogs/featured",
+  [exports.ASSET_URL_TYPE.productMSDSDocument]: "documents/products/msds",
+  [exports.ASSET_URL_TYPE.productTDSDocument]: "documents/products/tds",
+};
+
 exports.FILE_TYPES = {
   JPEG: "image/jpeg",
   PNG: "image/png",
