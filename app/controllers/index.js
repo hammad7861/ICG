@@ -3,6 +3,7 @@ const users = require("./users");
 const products = require("./products");
 const events = require("./events");
 const mediaAndNews = require("./mediaAndNews");
+const articles = require("./articles");
 
 module.exports = {
   users,
@@ -10,4 +11,5 @@ module.exports = {
   events,
   products,
   mediaAndNews,
+  articles,
 };

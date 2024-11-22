@@ -3,6 +3,8 @@ exports.ASSET_URL_TYPE = {
   productBannerImage: "Product Banner Image",
   eventBannerImage: "Event Banner Image",
   mediaAndNewsBannerImage: "Media And News Banner Image",
+  articleBannerImage: "Article Banner Image",
+  artcileAttachmentDocument: "Article Attachment Document",
   productMSDSDocument: "Product MSDS Document",
   productTDSDocument: "Product TDS Document",
 };
@@ -36,6 +38,7 @@ exports.ALLOWED_MIME_TYPES = {
   bannerImage: exports.ALLOWED_FILE_TYPES.IMAGES,
   MSDS: exports.ALLOWED_FILE_TYPES.PDF,
   TDS: exports.ALLOWED_FILE_TYPES.PDF,
+  articleAttachmet: exports.ALLOWED_FILE_TYPES.PDF,
 };
 
 exports.MEDIA_AND_NEWS_TYPES = {

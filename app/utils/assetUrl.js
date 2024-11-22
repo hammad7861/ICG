@@ -12,6 +12,10 @@ function getAssetUrl(req, assetType, assetPath) {
       return `${baseUrl}/assets/images/events/banners/${assetPath}`;
     case ASSET_URL_TYPE.mediaAndNewsBannerImage:
       return `${baseUrl}/assets/images/mediaAndNews/banners/${assetPath}`;
+    case ASSET_URL_TYPE.articleBannerImage:
+      return `${baseUrl}/assets/images/articles/banners/${assetPath}`;
+    case ASSET_URL_TYPE.artcileAttachmentDocument:
+      return `${baseUrl}/assets/documents/articles/attachments/${assetPath}`;
     case ASSET_URL_TYPE.productMSDSDocument:
       return `${baseUrl}/assets/documents/products/msds/${assetPath}`;
     case ASSET_URL_TYPE.productTDSDocument:
