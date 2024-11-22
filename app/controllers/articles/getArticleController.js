@@ -29,7 +29,7 @@ const getArticleController = {
 
       successResponse(res, 200, "Article fetched", { article });
     } catch (error) {
-      console.error("ERROR IN GETTING ARTICLE AND NEWS CONTROLLER", error);
+      console.error("ERROR IN GETTING ARTICLE CONTROLLER", error);
       return next(error);
     }
   },
