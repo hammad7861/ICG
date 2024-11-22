@@ -9,6 +9,7 @@ exports.ASSET_URL_TYPE = {
   blogFeaturedImage: "Blog Featured Image",
   productMSDSDocument: "Product MSDS Document",
   productTDSDocument: "Product TDS Document",
+  brochureAttachmentImage: "Brochure Attachment Document",
 };
 
 exports.ASSET_PATH_MAPPING = {
@@ -24,6 +25,9 @@ exports.ASSET_PATH_MAPPING = {
   [exports.ASSET_URL_TYPE.blogFeaturedImage]: "images/blogs/featured",
   [exports.ASSET_URL_TYPE.productMSDSDocument]: "documents/products/msds",
   [exports.ASSET_URL_TYPE.productTDSDocument]: "documents/products/tds",
+  [exports.ASSET_URL_TYPE.productTDSDocument]: "documents/products/tds",
+  [exports.ASSET_URL_TYPE.brochureAttachmentImage]:
+    "images/brochures/attachments",
 };
 
 exports.FILE_TYPES = {
@@ -56,7 +60,8 @@ exports.ALLOWED_MIME_TYPES = {
   featuredImage: exports.ALLOWED_FILE_TYPES.IMAGES,
   MSDS: exports.ALLOWED_FILE_TYPES.PDF,
   TDS: exports.ALLOWED_FILE_TYPES.PDF,
-  articleAttachmet: exports.ALLOWED_FILE_TYPES.PDF,
+  articleAttachment: exports.ALLOWED_FILE_TYPES.PDF,
+  brochureAttachment: exports.ALLOWED_FILE_TYPES.IMAGES,
 };
 
 exports.MEDIA_AND_NEWS_TYPES = {

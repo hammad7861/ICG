@@ -56,8 +56,8 @@ const updateArticleController = {
           filePathsToDelete.push({ path: bannerImagePath });
         }
 
-        if (files.articleAttachmet && files.articleAttachmet[0]) {
-          const { filename: attachmentFilename } = files.articleAttachmet[0];
+        if (files.articleAttachment && files.articleAttachment[0]) {
+          const { filename: attachmentFilename } = files.articleAttachment[0];
           updatePayload.attachment = attachmentFilename;
 
           const AttachemntPath = getAssetPath(

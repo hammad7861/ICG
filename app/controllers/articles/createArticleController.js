@@ -23,12 +23,12 @@ const createArticleController = {
         files = {},
       } = req;
 
-      const { bannerImage = [], articleAttachmet = [] } = files;
+      const { bannerImage = [], articleAttachment = [] } = files;
 
       const bannerFiles = bannerImage.map((file) => file.filename);
 
       const attachmentFilename =
-        articleAttachmet.length > 0 ? articleAttachmet[0].filename : null;
+        articleAttachment.length > 0 ? articleAttachment[0].filename : null;
 
       const articleData = {
         banner: bannerFiles,
