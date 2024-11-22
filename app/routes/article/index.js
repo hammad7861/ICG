@@ -32,7 +32,7 @@ const {
 const createMulterConfig = require("../../config/multerConfig");
 const uploadPaths = {
   bannerImage: path.resolve("assets/images/articles/banners"),
-  articleAttachmet: path.resolve("assets/documents/articles/attachments"),
+  articleAttachment: path.resolve("assets/documents/articles/attachments"),
 };
 const multiUpload = createMulterConfig(uploadPaths);
 
@@ -57,7 +57,7 @@ articleRouter.put(
   "/:articleId",
   multiUpload.fields([
     { name: "bannerImage", maxCount: 1 },
-    { name: "articleAttachmet", maxCount: 1 },
+    { name: "articleAttachment", maxCount: 1 },
   ]),
   [validateInputs(updateArticleValidationSchema), sanitizeInputs()],
   updateArticleController.updateArticle
@@ -67,7 +67,7 @@ articleRouter.post(
   "/",
   multiUpload.fields([
     { name: "bannerImage", maxCount: 1 },
-    { name: "articleAttachmet", maxCount: 1 },
+    { name: "articleAttachment", maxCount: 1 },
   ]),
   [validateInputs(createArticleValidationSchema), sanitizeInputs()],
   createArticleController.createArticle

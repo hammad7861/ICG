@@ -38,14 +38,14 @@ const createArticleValidationSchema = {
       )
       .required()
       .label("bannerImage"),
-    articleAttachmet: Joi.array()
+    articleAttachment: Joi.array()
       .items(
         Joi.object({
           originalname: Joi.string().required(),
           mimetype: Joi.string()
-            .valid(...ALLOWED_MIME_TYPES.articleAttachmet)
+            .valid(...ALLOWED_MIME_TYPES.articleAttachment)
             .required(),
-          fieldname: Joi.string().valid("articleAttachmet").required(),
+          fieldname: Joi.string().valid("articleAttachment").required(),
           encoding: Joi.string().required(),
           destination: Joi.string().required(),
           filename: Joi.string().required(),
@@ -54,7 +54,7 @@ const createArticleValidationSchema = {
         })
       )
       .optional()
-      .label("articleAttachmet"),
+      .label("articleAttachment"),
   }).required(),
 };
 
