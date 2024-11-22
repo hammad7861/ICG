@@ -7,6 +7,7 @@ const userRouter = require("./user");
 const productRouter = require("./product");
 const eventRouter = require("./event");
 const mediaAndNewsRouter = require("./mediaAndNews");
+const articleRouter = require("./articles");
 
 // Middlewares
 const { authMiddleware } = require("../middlewares");
@@ -17,5 +18,6 @@ router.use("/users", userRouter);
 router.use("/products", productRouter);
 router.use("/events", eventRouter);
 router.use("/mediaAndNews", mediaAndNewsRouter);
+router.use("/articles", articleRouter);
 
 module.exports = router;

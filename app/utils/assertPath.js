@@ -10,6 +10,10 @@ function getAssetPath(assetType, assetName) {
       return `../assets/images/events/banners/${assetName}`;
     case ASSET_URL_TYPE.mediaAndNewsBannerImage:
       return `../assets/images/mediaAndNews/banners/${assetName}`;
+    case ASSET_URL_TYPE.articleBannerImage:
+      return `../assets/images/articles/banners/${assetName}`;
+    case ASSET_URL_TYPE.artcileAttachmentDocument:
+      return `../assets/documents/articles/attachments/${assetName}`;
     case ASSET_URL_TYPE.productMSDSDocument:
       return `../assets/documents/products/msds/${assetName}`;
     case ASSET_URL_TYPE.productTDSDocument:

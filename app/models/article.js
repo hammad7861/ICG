@@ -23,16 +23,12 @@ const ArticleSchema = new Schema(
       required: true,
       trim: true,
     },
-    attachment: {
-      type: String,
-      trim: true,
-    },
     content_category: {
       type: String,
       required: true,
       trim: true,
     },
-    tags: [{ type: String, trim: true }],
+    tags: [{ type: String, trim: true, required: true }],
     summary: {
       type: String,
       required: true,
@@ -42,6 +38,11 @@ const ArticleSchema = new Schema(
       type: String,
       required: true,
     },
+    attachment: {
+      type: String,
+      trim: true,
+    },
+    banner: [{ type: String, trim: true, required: true }],
     archived: {
       type: Boolean,
       default: false,

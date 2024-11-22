@@ -1,5 +1,5 @@
 const { ASSET_URL_TYPE } = require("../../constants");
-const { Event } = require("../../models");
+const { MediaAndNews } = require("../../models");
 const {
   common: {
     getOneControllerQueries: { getOne },
@@ -13,25 +13,25 @@ const deleteMediaAndNewsController = {
   async deleteMediaAndNews(req, res, next) {
     try {
       const {
-        sanitizedParams: { eventId },
+        sanitizedParams: { mediaAndNewsId },
       } = req;
 
-      const event = await getOne(Event, eventId);
+      const mediaAndNews = await getOne(MediaAndNews, mediaAndNewsId);
 
-      if (!event) throw CustomErrorHandler.notFound("Event");
+      if (!mediaAndNews) throw CustomErrorHandler.notFound("MediaAndNews");
 
       const bannerImagePath = getAssetPath(
-        ASSET_URL_TYPE.eventBannerImage,
-        event.banner
+        ASSET_URL_TYPE.mediaAndNewsBannerImage,
+        mediaAndNews.banner
       );
 
-      await deleteRecord(Event, eventId);
+      await deleteRecord(MediaAndNews, mediaAndNewsId);
 
       deleteFiles([{ path: bannerImagePath }]);
 
-      successResponse(res, 200, "Event deleted successfully");
+      successResponse(res, 200, "Media and News deleted successfully");
     } catch (error) {
-      console.error("ERROR IN DELETE EVENT CONTROLLER", error);
+      console.error("ERROR IN DELETE MEDIA AND NEWS CONTROLLER", error);
       return next(error);
     }
   },
