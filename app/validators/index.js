@@ -4,6 +4,7 @@ const products = require("./products");
 const events = require("./events");
 const mediaAndNews = require("./mediaAndNews");
 const articles = require("./articles");
+const blogs = require("./blogs");
 
 module.exports = {
   users,
@@ -12,4 +13,5 @@ module.exports = {
   events,
   mediaAndNews,
   articles,
+  blogs,
 };

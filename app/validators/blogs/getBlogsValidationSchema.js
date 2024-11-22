@@ -1,10 +1,10 @@
 const Joi = require("joi");
 
-const getArticlesValidationSchema = {
+const getBlogsValidationSchema = {
   query: Joi.object({
     page: Joi.number().integer().positive().required(),
     limit: Joi.number().integer().positive().required(),
   }),
 };
 
-module.exports = getArticlesValidationSchema;
+module.exports = getBlogsValidationSchema;
