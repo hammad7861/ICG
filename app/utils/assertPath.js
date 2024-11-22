@@ -14,6 +14,10 @@ function getAssetPath(assetType, assetName) {
       return `../assets/images/articles/banners/${assetName}`;
     case ASSET_URL_TYPE.artcileAttachmentDocument:
       return `../assets/documents/articles/attachments/${assetName}`;
+    case ASSET_URL_TYPE.blogBannerImage:
+      return `../assets/images/blogs/banners/${assetName}`;
+    case ASSET_URL_TYPE.blogFeaturedImage:
+      return `../assets/images/blogs/featured/${assetName}`;
     case ASSET_URL_TYPE.productMSDSDocument:
       return `../assets/documents/products/msds/${assetName}`;
     case ASSET_URL_TYPE.productTDSDocument:
