@@ -8,7 +8,7 @@ const JobSchema = new Schema(
       required: true,
       trim: true,
     },
-    departments: {
+    department: {
       type: String,
       required: true,
       trim: true,
@@ -21,7 +21,6 @@ const JobSchema = new Schema(
     employment_type: {
       type: String,
       required: true,
-      enum: ["full-time", "part-time", "contract", "internship"],
       trim: true,
     },
     description: {
