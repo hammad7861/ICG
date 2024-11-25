@@ -10,6 +10,7 @@ const mediaAndNewsRouter = require("./mediaAndNews");
 const articleRouter = require("./article");
 const blogRouter = require("./blog");
 const brochureRouter = require("./brochure");
+const jobRouter = require("./job");
 
 // Middlewares
 const { authMiddleware } = require("../middlewares");
@@ -23,5 +24,6 @@ router.use("/mediaAndNews", mediaAndNewsRouter);
 router.use("/articles", articleRouter);
 router.use("/blogs", blogRouter);
 router.use("/brochures", brochureRouter);
+router.use("/jobs", jobRouter);
 
 module.exports = router;

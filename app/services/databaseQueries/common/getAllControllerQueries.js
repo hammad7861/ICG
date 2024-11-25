@@ -3,7 +3,7 @@ const getAllControllerQueries = {
     const query = { archived: false };
     const records = await Model.find(
       query,
-      `-createdAt -updatedAt -__v ${skipFields}`
+      `-archived -createdAt -updatedAt -__v ${skipFields}`
     )
       .skip(skip)
       .limit(limit)

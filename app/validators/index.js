@@ -6,6 +6,7 @@ const mediaAndNews = require("./mediaAndNews");
 const articles = require("./articles");
 const blogs = require("./blogs");
 const brochures = require("./brochures");
+const jobs = require("./jobs");
 
 module.exports = {
   users,
@@ -16,4 +17,5 @@ module.exports = {
   articles,
   blogs,
   brochures,
+  jobs,
 };
