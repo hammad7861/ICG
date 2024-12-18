@@ -36,16 +36,16 @@ const updateMediaAndNewsController = {
         description,
         publishDate,
         type,
-        ...(type === MEDIA_AND_NEWS_TYPES.NEWS_ANNOUNCEMENT && {
+        ...(type === MEDIA_AND_NEWS_TYPES.PRESS_RELEASE && {
           name,
           email,
           contact,
         }),
-        ...(type === MEDIA_AND_NEWS_TYPES.PRESS_RELEASE && { content }),
+        ...(type === MEDIA_AND_NEWS_TYPES.NEWS_ANNOUNCEMENT && { content }),
       };
 
       const unsetPayload =
-        type === MEDIA_AND_NEWS_TYPES.NEWS_ANNOUNCEMENT
+        type === MEDIA_AND_NEWS_TYPES.PRESS_RELEASE
           ? { content: "" }
           : { name: "", email: "", contact: "" };
 

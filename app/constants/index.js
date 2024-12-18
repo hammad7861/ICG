@@ -61,7 +61,7 @@ exports.ALLOWED_MIME_TYPES = {
   MSDS: exports.ALLOWED_FILE_TYPES.PDF,
   TDS: exports.ALLOWED_FILE_TYPES.PDF,
   articleAttachment: exports.ALLOWED_FILE_TYPES.PDF,
-  brochureAttachment: exports.ALLOWED_FILE_TYPES.IMAGES,
+  brochureAttachment: exports.ALLOWED_FILE_TYPES.PDF,
 };
 
 exports.MEDIA_AND_NEWS_TYPES = {

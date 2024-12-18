@@ -14,22 +14,22 @@ const createMediaAndNewsValidationSchema = {
       .valid(...ALLOWED_MEDIA_AND_NEWS_TYPES)
       .required(),
     name: Joi.string().when("type", {
-      is: MEDIA_AND_NEWS_TYPES.NEWS_ANNOUNCEMENT,
+      is: MEDIA_AND_NEWS_TYPES.PRESS_RELEASE,
       then: Joi.required(),
       otherwise: Joi.forbidden(),
     }),
     email: Joi.string().email().when("type", {
-      is: MEDIA_AND_NEWS_TYPES.NEWS_ANNOUNCEMENT,
-      then: Joi.required(),
+      is: MEDIA_AND_NEWS_TYPES.PRESS_RELEASE,
+      then: Joi.string().email().required(),
       otherwise: Joi.forbidden(),
     }),
     contact: Joi.string().when("type", {
-      is: MEDIA_AND_NEWS_TYPES.NEWS_ANNOUNCEMENT,
+      is: MEDIA_AND_NEWS_TYPES.PRESS_RELEASE,
       then: Joi.required(),
       otherwise: Joi.forbidden(),
     }),
     content: Joi.string().when("type", {
-      is: MEDIA_AND_NEWS_TYPES.PRESS_RELEASE,
+      is: MEDIA_AND_NEWS_TYPES.NEWS_ANNOUNCEMENT,
       then: Joi.required(),
       otherwise: Joi.forbidden(),
     }),

@@ -3,6 +3,10 @@ services:
     build:
       context: ./ICG # Adjust if frontend is in a different directory
       dockerfile: Dockerfile # Make sure this points to the correct Dockerfile
+      args:
+        VITE_TARGETED_URL: "http://localhost:3000/api"
+    environment:
+      VITE_TARGETED_URL: "http://localhost:3000/api"
     ports:
       - "8080:80" # Expose the frontend app on port 8080
     networks:
