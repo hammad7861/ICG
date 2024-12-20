@@ -4,6 +4,7 @@ const getProductController = require("./getProductController");
 const getProductsController = require("./getProductsController");
 const updateProductController = require("./updateProductController");
 const publishProductController = require("./publishProductController");
+const getFilteredProductsController = require("./getFilteredProductsController");
 
 module.exports = {
   createProductController,
@@ -12,4 +13,5 @@ module.exports = {
   updateProductController,
   deleteProductController,
   publishProductController,
+  getFilteredProductsController,
 };

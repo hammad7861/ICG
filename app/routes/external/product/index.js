@@ -2,18 +2,12 @@ const productRouter = require("express").Router();
 
 // controllers
 const {
-  products: {
-    getProductsController,
-    getProductController,
-  },
+  products: { getFilteredProductsController, getProductController },
 } = require("../../../controllers");
 
 // validators
 const {
-  products: {
-    getProductsValidationSchema,
-    getProductValidationSchema,
-  },
+  products: { getFilteredProductsValidationSchema, getProductValidationSchema },
 } = require("../../../validators");
 
 // middlewares
@@ -28,10 +22,10 @@ productRouter.get(
   "/",
   [
     paginationFormula,
-    validateInputs(getProductsValidationSchema),
+    validateInputs(getFilteredProductsValidationSchema),
     sanitizeInputs(),
   ],
-  getProductsController.getProducts
+  getFilteredProductsController.getFilteredProducts
 );
 
 productRouter.get(

@@ -1,6 +1,6 @@
 const getAllControllerQueries = {
-  async getAll(Model, limit, skip, skipFields = "") {
-    const query = { archived: false };
+  async getAll(Model, limit, skip, skipFields = "", filter = undefined) {
+    const query = { archived: false, ...filter };
     const records = await Model.find(
       query,
       `-archived -createdAt -updatedAt -__v ${skipFields}`
