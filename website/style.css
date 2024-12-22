@@ -1,0 +1,16 @@
+/* Assuming your submenu is nested within a parent menu item */
+.menu-item {
+    position: relative; /* Ensure the parent menu item is positioned relatively */
+}
+
+.submenu {
+    position: absolute; /* Position the submenu absolutely */
+    top: 0; /* Align the submenu at the same level as the parent */
+    left: 100%; /* Position the submenu to the right of the parent */
+    /* Add any additional styling you need for the submenu */
+    display: none; /* Initially hide the submenu */
+}
+
+.menu-item:hover .submenu {
+    display: block; /* Show the submenu on hover */
+}

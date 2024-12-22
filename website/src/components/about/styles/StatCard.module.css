@@ -1,0 +1,28 @@
+.statCardContainer {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: -3px 4px 146px rgba(0, 0, 0, 0.08);
+  padding: 6px 38px 12px;
+  text-align: center;
+  flex: 1;
+}
+
+.statValue {
+  color: #8aa823;
+  font:
+    500 28px/48px Montserrat,
+    sans-serif;
+}
+
+.statLabel {
+  color: #61656e;
+  font:
+    400 12px/25px Montserrat,
+    sans-serif;
+}
+
+@media (max-width: 991px) {
+  .statCardContainer {
+    padding: 20px;
+  }
+}

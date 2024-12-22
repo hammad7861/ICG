@@ -1,0 +1,155 @@
+.find-product-container {
+  background-image: url("/public/assets/greenflex.png"); /* Relative path for your project */
+  background-size: cover; /* Ensures the background image covers the container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  width: 70%;
+  height: 541px;
+  padding: 34px 118px;
+  background-color: rgba(202, 209, 200, 0.8); /* Semi-transparent overlay */
+  box-shadow: 0px 9px 21px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 110px auto 0;
+}
+
+.find-product-header {
+  color: #023b3b;
+  font-size: 34.5px;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  line-height: 42.56px;
+}
+
+.search-container {
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-field {
+  width: 85%;
+  background: white;
+  border-bottom: 1px solid #cccccc;
+  padding: 20px 53px;
+}
+
+.input-placeholder {
+  color: #5b6670;
+  font-size: 15.52px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.search-button {
+  background: #a6ce38;
+  border-radius: 6.5px;
+  padding: 12px 30px;
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  font-size: 15.52px;
+  cursor: pointer;
+}
+
+.dropdown-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.dropdown {
+  width: 45%;
+  background: #f2f2f2;
+  padding: 17px 20px;
+  border-radius: 7.76px;
+}
+
+.dropdown label {
+  color: #2c2c31;
+  font-size: 13.3px;
+  text-transform: uppercase;
+}
+
+.dropdown-select {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: black;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 15.52px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.dropdown-icon {
+  border: 1.91px solid #a6ce39;
+  transform: rotate(90deg);
+  width: 7px;
+  height: 13px;
+}
+
+.other-resources {
+  text-align: center;
+  margin-top: 30px;
+  color: black;
+  font-size: 17.73px;
+  font-family: Arial, sans-serif;
+}
+
+.resource-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.resource-item {
+  color: #023b3b;
+  font-size: 17.73px;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+}
+
+.view-all-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  padding: 12px 20px;
+  border: 1px solid #a6ce39;
+  border-radius: 6.65px;
+  cursor: pointer;
+}
+
+.view-all-text {
+  color: #023b3b;
+  font-size: 17.73px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.view-all-arrow {
+  width: 25px;
+  height: 20px;
+}
+
+.arrow-icon {
+  border: 1.83px solid #a6ce39;
+  transform: rotate(90deg);
+  width: 7px;
+  height: 15px;
+}
+
+.view-all-products:hover {
+  background: #a6ce38;
+  color: white;
+}
+
+.view-all-products:hover .view-all-text,
+.view-all-products:hover .arrow-icon {
+  color: white;
+  border-color: white;
+}

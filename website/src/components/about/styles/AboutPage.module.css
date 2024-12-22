@@ -1,0 +1,241 @@
+.aboutContainer {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.heroSection {
+  position: relative;
+  min-height: 427px;
+  margin-top: 46px;
+  padding: 189px 80px 0 0;
+
+  background-size: cover;
+  background-position: center;
+  /* color: rgb(0, 0, 0);
+  padding: 100px 20px;
+  text-align: center; */
+  width: 1288px;
+  height: 427px;
+  margin-left: 42px;
+
+  margin-top: 40px;
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+.heroTitle {
+  position: relative;
+  color: #fff;
+  margin-left: 185px;
+  font:
+    700 65px/0.8 Albert Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.highlight {
+  color: #8aa823;
+}
+
+.whyUsSection {
+  display: flex;
+  gap: 20px;
+  margin: 120px auto;
+  max-width: 1228px;
+  padding: 0 20px;
+}
+
+.whyUsContent {
+  flex: 1;
+}
+
+.sectionTitle {
+  color: #023b3b;
+  font:
+    600 49px/1 Albert Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.whyUsDescription {
+  color: #444;
+  margin-top: 25px;
+  font:
+    400 18px/28px Montserrat,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.whyUsImage {
+  flex: 1;
+  object-fit: contain;
+  max-width: 45%;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h3 {
+  color: #a6ce38;
+  font-size: 24px;
+}
+
+.stat p {
+  color: #555;
+}
+
+.strategic-priorities-section {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+  background-color: #f4fdf4;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.image-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.priority-image.large {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.priority-image.small {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.priority-content {
+  max-width: 600px;
+}
+
+.priority-title {
+  font-size: 24px;
+  color: #023b3b;
+}
+
+.priority-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.statsSection {
+  display: flex;
+  justify-content: center;
+  gap: 21px;
+  margin: 17px auto;
+  max-width: 405px;
+}
+
+.featuresSection {
+  margin: 85px auto;
+  max-width: 1098px;
+  padding: 0 20px;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.coreValuesSection {
+  padding: 85px 80px;
+  background-color: #fff;
+}
+
+.coreValuesTitle {
+  color: #023b3b;
+  text-align: center;
+  font:
+    700 58px/53px Albert Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  margin-bottom: 50px;
+}
+
+.coreValuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1162px;
+  margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+  .heroSection {
+    margin-top: 40px;
+    padding: 100px 20px 0;
+  }
+
+  .heroTitle {
+    margin-left: 10px;
+    font-size: 40px;
+  }
+
+  .whyUsSection {
+    flex-direction: column;
+    margin: 40px auto;
+  }
+
+  .whyUsImage {
+    max-width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 40px;
+  }
+
+  .visionMissionSection {
+    flex-direction: column;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .coreValuesSection {
+    padding: 40px 20px;
+  }
+
+  .coreValuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .coreValuesTitle {
+    font-size: 40px;
+    line-height: 41px;
+  }
+}

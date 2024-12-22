@@ -1,0 +1,82 @@
+.printing-page {
+  font-family: Albert Sans;
+  line-height: 1.6;
+}
+
+.header-section-electronic {
+  background-image: url("/public/assets/image (2).png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  width: 1288px;
+  height: 427px;
+  margin-left: 42px;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.header-text h1 {
+  font-size: 48px;
+  margin: 0;
+  margin-top: 60px;
+  font-family: Albert Sans;
+  font-size: 58.67px;
+  font-weight: 700;
+  line-height: 70.4px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.content-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+}
+
+.text-section {
+  flex: 1 1 45%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-section {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.solutions-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.solution {
+  flex: 1 1 45%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-section {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-section p {
+  margin: 0;
+}

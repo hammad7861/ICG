@@ -1,0 +1,192 @@
+.Maincontainer {
+  background-image: url("/public/assets/greenflex.png"); /* Relative path for your project */
+  background-size: cover; /* Ensures the background image covers the container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  margin-top: 40px;
+  padding: 40px 0;
+}
+
+.container {
+  border-radius: 0 0 12px 12px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 9px 21px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 80px;
+  width: 1043px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  max-width: 805px;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.industryLabel {
+  color: rgba(44, 44, 49, 1);
+  text-transform: uppercase;
+  align-self: end;
+  margin-top: 76px;
+  font:
+    400 13px Noto Sans,
+    sans-serif;
+}
+
+.titleGroup {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: rgba(2, 59, 59, 1);
+  text-align: center;
+  font:
+    700 40px/1 Albert Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.applicationLabel {
+  color: rgba(44, 44, 49, 1);
+  text-transform: uppercase;
+  align-self: end;
+  margin-top: 44px;
+  font:
+    400 13px Noto Sans,
+    sans-serif;
+}
+
+.dropdownGroup {
+  display: flex;
+  margin-top: 14px;
+  gap: 3px;
+  color: rgba(0, 0, 0, 1);
+  flex-wrap: wrap;
+  font:
+    500 16px/1.5 Noto Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.searchGroup {
+  display: flex;
+  margin-top: 33px;
+  width: 100%;
+  gap: 17px;
+  flex-wrap: wrap;
+}
+
+.resourcesText {
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  align-self: center;
+  margin-top: 61px;
+  font:
+    400 18px/1.5 Arial,
+    sans-serif;
+}
+
+.resourceLinks {
+  align-self: center;
+  display: flex;
+  margin-top: 32px;
+  width: 100%;
+  max-width: 589px;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.viewAllLink {
+  border-radius: 7px;
+  align-self: center;
+  display: flex;
+  margin-top: 27px;
+  width: 225px;
+  max-width: 100%;
+  gap: 18px;
+  color: rgba(2, 59, 59, 1);
+  text-align: center;
+  padding: 14px 23px;
+  font:
+    500 18px/1.5 Noto Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  border: 1px solid rgba(138, 168, 35, 1);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.viewAllLink:hover {
+  background-color: rgba(138, 168, 35, 0.1);
+}
+
+.viewAllText {
+  flex-grow: 1;
+  width: 132px;
+  margin: auto 0;
+}
+
+.viewAllIcon {
+  aspect-ratio: 1.32;
+  object-fit: contain;
+  object-position: center;
+  width: 25px;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .industryLabel {
+    margin-top: 40px;
+  }
+
+  .applicationLabel {
+    margin-top: 40px;
+  }
+
+  .dropdownGroup {
+    margin-right: 2px;
+  }
+
+  .searchGroup {
+    max-width: 100%;
+  }
+
+  .resourcesText {
+    margin-top: 40px;
+  }
+
+  .viewAllLink {
+    padding-left: 20px;
+  }
+}

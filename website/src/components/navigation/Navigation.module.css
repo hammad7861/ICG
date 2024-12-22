@@ -1,0 +1,222 @@
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 4px 25px -3px rgba(48, 49, 51, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 40px 0px;
+  padding: 16px 47px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1000;
+}
+
+.logoLink {
+  text-decoration: none;
+  display: block;
+}
+
+.logo {
+  aspect-ratio: 0.81;
+  object-fit: contain;
+  width: 61px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure items are spaced out */
+  padding: 10px 20px;
+  background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.dark-mode-toggle {
+  margin-left: 20px;
+  padding: 10px;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s; /* Smooth transition */
+}
+
+body.dark-mode .dark-mode-toggle {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column; /* Stack items on smaller screens */
+  }
+}
+
+.navigationItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigationContent {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.navigationText {
+  white-space: nowrap;
+}
+
+.dropdownIcon {
+  aspect-ratio: 2;
+  object-fit: contain;
+  width: 22px;
+  transition: transform 0.2s ease;
+}
+
+.dropdownIconOpen {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  padding: 8px 0;
+  z-index: 1000;
+}
+
+.dropdownItem {
+  width: 100%;
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  text-align: left;
+  color: rgb(2, 59, 59);
+  font:
+    400 16px Roboto,
+    sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background-color: rgba(138, 168, 35, 0.1);
+}
+
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.searchButton {
+  align-self: flex-end;
+  margin-right: 50px;
+  height: 16px;
+  width: 16px;
+  padding-bottom: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.searchIcon {
+  height: 16px;
+  width: 100%;
+  background-image: url("/public/assets/SVG (6).png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.actionSection {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.socialIconLink {
+  text-decoration: none;
+  display: block;
+}
+
+.socialIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 23px;
+  transition: opacity 0.2s ease;
+}
+
+.socialIcon:hover {
+  opacity: 0.8;
+}
+
+.stocksButton {
+  border-radius: 6px;
+  background-color: rgb(138, 168, 35);
+  box-shadow: 0 7px 27px rgba(162, 198, 64, 0.33);
+  color: #fff;
+  letter-spacing: -0.15px;
+  padding: 10px 22px 12px;
+  border: none;
+  cursor: pointer;
+  font:
+    500 15px/1 "Plus Jakarta Sans",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  transition: background-color 0.2s ease;
+}
+
+.stocksButton:hover {
+  background-color: rgb(128, 158, 25);
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .navigation {
+    max-width: 100%;
+  }
+
+  .navigationText {
+    white-space: initial;
+  }
+
+  .searchButton {
+    margin-right: 10px;
+  }
+
+  .stocksButton {
+    padding: 0 20px;
+  }
+}

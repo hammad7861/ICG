@@ -1,0 +1,215 @@
+/* .hero-section {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+}
+
+.hero-content input {
+  padding: 12px;
+  width: 300px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+} */
+
+.custom-container {
+  width: 100%;
+  height: 593px;
+  position: relative;
+  overflow: hidden; /* Ensure no overflow from the container */
+  background: #090a08;
+}
+
+/* Background Image */
+.custom-background-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* background-image: url('/path/to/your/image.jpg'); Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* Gradient Overlay */
+.custom-gradient-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(2, 59, 59, 0.49) 0%,
+    rgba(2, 59, 59, 0.49) 100%
+  );
+  z-index: 1;
+}
+
+/* Left-bottom vector (appears partially) */
+.custom-background-left {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(166, 206, 57, 0.35); /* Green color */
+  clip-path: polygon(0 100%, 0 0, 100% 100%); /* Triangle shape */
+  z-index: 1;
+}
+
+/* Right-top vector (appears partially) */
+.custom-background-right {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: rgba(166, 206, 57, 0.35); /* Green color */
+  clip-path: polygon(100% 0, 0 0, 100% 100%); /* Triangle shape */
+  z-index: 1;
+}
+
+/* Content section */
+.custom-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin-top: 100px; /* Adjust as per design */
+  color: white;
+}
+
+/* Title text */
+.custom-title {
+  font-size: 48px;
+  font-family: "Albert Sans", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* Description text */
+.custom-description {
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Search container */
+.custom-search-container {
+  width: 50%;
+  height: 75px;
+  margin: 20px auto;
+  position: relative;
+}
+
+/* Search box */
+.custom-search-box {
+  width: 100%;
+  height: 75px;
+  background: white;
+  border-radius: 50px;
+  position: absolute;
+}
+
+/* Search placeholder text */
+.custom-search-placeholder {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d9d9d9;
+  font-size: 18px;
+  font-family: "Roboto Slab", serif;
+  z-index: 2;
+}
+
+/* Search icon */
+.custom-search-icon {
+  width: 60px;
+  height: 60px;
+  background: #a6ce39;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  top: 7.5px;
+  z-index: 2;
+}
+
+/* Icon inner circle */
+.custom-icon-inner {
+  width: 28px;
+  height: 28px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Chat box button */
+.custom-chat-box {
+  width: 300px;
+  height: 53px;
+  position: absolute;
+  right: 30px;
+  bottom: 0px;
+  background: #a6ce39;
+  border-radius: 10px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-chat-text {
+  color: white;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}

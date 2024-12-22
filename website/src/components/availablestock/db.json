@@ -1,0 +1,29 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Omniquan AN 168",
+        "casNumber": "31570-04-4",
+        "imageUrl": "https://via.placeholder.com/250x150.png?text=Omniquan+AN+168"
+      },
+      {
+        "id": 2,
+        "name": "Omniquan AN 136",
+        "casNumber": "181314-48-7",
+        "imageUrl": "https://via.placeholder.com/250x150.png?text=Omniquan+AN+136"
+      },
+      {
+        "id": 3,
+        "name": "Omniquan AN 245",
+        "casNumber": "181314-48-7",
+        "imageUrl": "https://via.placeholder.com/250x150.png?text=Omniquan+AN+245"
+      },
+      {
+        "id": 4,
+        "name": "Omniquan AN 565",
+        "casNumber": "181314-48-7",
+        "imageUrl": "https://via.placeholder.com/250x150.png?text=Omniquan+AN+565"
+      }
+    ]
+  }
+  

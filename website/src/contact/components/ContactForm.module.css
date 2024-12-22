@@ -1,0 +1,105 @@
+.formWrapper {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  width: 565px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: auto 0;
+}
+.formHeader {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+  font-family: Arial, sans-serif;
+  color: rgba(19, 19, 19, 1);
+  text-align: center;
+  line-height: 1.4;
+  justify-content: center;
+}
+.headerText {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.title {
+  font-size: 41px;
+  font-weight: 700;
+}
+.subtitle {
+  font-size: 21px;
+  font-weight: 400;
+  margin-top: 25px;
+}
+.form {
+  display: flex;
+  margin-top: 41px;
+  width: 100%;
+  max-width: 565px;
+  flex-direction: column;
+  justify-content: start;
+}
+.inputRow {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  gap: 33px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.inputField {
+  display: flex;
+  min-width: 240px;
+  flex-direction: column;
+  justify-content: start;
+  flex: 1;
+  flex-basis: 0%;
+}
+.label {
+  color: rgba(52, 64, 84, 1);
+  font-size: 14px;
+  line-height: 1;
+}
+.input {
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  margin-top: 6px;
+  width: 100%;
+  font-size: 16px;
+  color: rgba(102, 112, 133, 1);
+  line-height: 1.5;
+  padding: 10px 14px;
+  border: 1px solid rgba(208, 213, 221, 1);
+}
+.textarea {
+  min-height: 164px;
+  resize: vertical;
+}
+.checkbox {
+  display: flex;
+  margin-top: 27px;
+  width: 493px;
+  max-width: 100%;
+  align-items: start;
+  gap: 12px;
+}
+.submitButton {
+  align-self: stretch;
+  border-radius: 8px;
+  background-color: rgba(138, 168, 35, 1);
+  margin-top: 27px;
+  min-height: 49px;
+  width: 100%;
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  cursor: pointer;
+  font:
+    400 16px Arial,
+    sans-serif;
+}

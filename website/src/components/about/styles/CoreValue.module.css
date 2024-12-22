@@ -1,0 +1,35 @@
+.coreValueContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.coreValueIcon {
+  width: 122px;
+  height: 122px;
+  object-fit: contain;
+}
+
+.coreValueTitle {
+  color: #023b3b;
+  font:
+    700 24px/2 Poppins,
+    sans-serif;
+  margin-top: 18px;
+}
+
+.coreValueDescription {
+  color: #444;
+  font:
+    400 16px/28px Poppins,
+    sans-serif;
+  margin-top: 16px;
+}
+
+@media (max-width: 991px) {
+  .coreValueContainer {
+    margin-top: 40px;
+  }
+}

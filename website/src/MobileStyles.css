@@ -1,0 +1,20 @@
+/* Add your mobile-specific styles here */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  /* Add more mobile-specific styles as needed */
+}

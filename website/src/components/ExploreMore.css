@@ -1,0 +1,235 @@
+/* .expertise {
+  padding: 50px 20px;
+  background-color: #f0f0f0;
+}
+
+.expertise h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.expertise-card {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.expertise-card img {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+} */
+
+.explore-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+}
+
+.explore-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2b2b2b;
+}
+
+.explore-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+@media (min-width: 769px) {
+  /* Solutions */
+  #root .explore-buttons .solutions-btn {
+    padding-left: 27px;
+  }
+}
+.explore-buttons button {
+  color: #000000;
+  font-family: "Noto Sans";
+  font-size: 15.185px;
+  font-style: normal;
+  font-weight: 700;
+  border: none;
+  background-color: white;
+  margin-bottom: px;
+
+  letter-spacing: 1.424px;
+  text-transform: uppercase;
+}
+
+.explore-buttons button:hover {
+  color: #8bc53f;
+}
+
+.explore-buttons button.active {
+  color: #8bc53f;
+  border-bottom: 2px solid black;
+}
+
+/* Container grid for all industry cards */
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Individual industry card */
+.industry-card {
+  position: relative;
+  width: 100%;
+  width: 363px;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card background */
+.card-background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Overlay for gradient effect */
+.card-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.59) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Circle for icon */
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border: 3px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Card icon inside the circle */
+.card-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Title styling */
+.industry-title {
+  color: white;
+  font-size: 18px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.view-all-btn {
+  padding: 0.7rem 2rem;
+  background-color: #8bc53f;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #6fa82e;
+}
+
+/* Responsive Design */
+/* For tablets and small screens */
+@media (max-width: 768px) {
+  .explore-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .explore-buttons button {
+    width: 100%;
+    padding: 0.7rem;
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .industry-card {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .explore-title {
+    font-size: 1.5rem;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .explore-buttons button {
+    font-size: 14px;
+  }
+
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .industry-title {
+    font-size: 16px;
+  }
+}

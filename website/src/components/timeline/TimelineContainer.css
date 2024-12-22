@@ -1,0 +1,19 @@
+.Automotive-page {
+  font-family: Arial, sans-serif;
+  color: #180c0c;
+  line-height: 1.6;
+}
+
+.header-section-auto {
+  background-image: url("/public/assets/construction.png");
+  background-size: cover;
+  background-position: center;
+  color: rgb(0, 0, 0);
+  padding: 100px 20px;
+  text-align: center;
+  width: 1288px;
+  height: 427px;
+  margin-left: 42px;
+  border-radius: 12px;
+  margin-top: 40px;
+}

@@ -1,0 +1,353 @@
+.contactWrapper {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 54px;
+}
+
+.mainContent {
+  margin-top: 83px;
+  padding: 0 80px;
+  width: 100%;
+}
+
+.contentContainer {
+  margin: 0 auto;
+  max-width: 1242px;
+  width: 100%;
+}
+
+.twoColumnLayout {
+  display: flex;
+  gap: 20px;
+}
+
+.leftColumn {
+  width: 38%;
+}
+
+.rightColumn {
+  width: 62%;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoHeader {
+  margin-bottom: 40px;
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.infoTitle {
+  color: #023b3b;
+  font-size: 19px;
+  line-height: 2;
+}
+
+.titleDivider {
+  background-color: #0162ef;
+  height: 2px;
+  width: 102px;
+}
+
+.mainTitle {
+  color: #191c1f;
+  font-size: 41px;
+  line-height: 49px;
+  margin-top: 12px;
+}
+
+.highlight {
+  color: #8aa823;
+}
+
+.infoDescription {
+  color: #475156;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  margin-top: 25px;
+}
+
+.contactMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  margin-top: 31px;
+}
+
+.contactMethod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.methodIcon {
+  background-color: #ecffed;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  width: 56px;
+}
+
+.icon {
+  height: 41px;
+  width: 41px;
+}
+
+.methodTitle {
+  color: #131313;
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 25px;
+}
+
+.methodDescription {
+  color: #131313;
+  font-family: Montserrat, sans-serif;
+  font-size: 21px;
+  margin-top: 27px;
+}
+
+.methodContact {
+  color: #023b3b;
+  font-family: Montserrat, sans-serif;
+  font-size: 21px;
+  margin-top: 27px;
+  text-decoration: none;
+}
+
+.formContainer {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.formTitle {
+  color: #8aa823;
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+.formHeader {
+  margin-bottom: 40px;
+}
+
+.getInTouch {
+  color: #131313;
+  font-size: 41px;
+  margin-bottom: 25px;
+}
+
+.formDescription {
+  color: #131313;
+  font-size: 21px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.formRow {
+  display: flex;
+  gap: 33px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.inputLabel {
+  color: #344054;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.formInput,
+.phoneNumber,
+.messageInput {
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 10px 14px;
+}
+
+.phoneInput {
+  display: flex;
+  gap: 8px;
+}
+
+.countrySelect {
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 80px;
+}
+
+.messageInput {
+  height: 120px;
+  resize: vertical;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkbox {
+  height: 20px;
+  width: 20px;
+}
+
+.checkboxLabel {
+  color: #475467;
+  font-size: 16px;
+}
+
+.submitButton {
+  background-color: #8aa823;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 16px;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #7a9520;
+}
+
+.mapTitle {
+  color: #8aa823;
+  font-size: 38px;
+  margin: 55px 0 20px;
+}
+
+.locationsWrapper {
+  background-color: #023b3b;
+  color: #fff;
+  padding: 40px 25px;
+  position: relative;
+}
+
+.backgroundMap {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.locationsContainer {
+  position: relative;
+  z-index: 1;
+}
+
+.locationGroups {
+  display: flex;
+  gap: 50px;
+  max-width: 881px;
+  margin: 0 auto;
+}
+
+.locationGroup {
+  flex: 1;
+}
+
+.groupTitle {
+  font-size: 23px;
+
+  margin-bottom: auto;
+}
+
+.locationList {
+  list-style: none;
+  padding-top: 20px;
+  padding-left: 4px;
+}
+
+.location {
+  color: #ececec;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.worldMapSection {
+  background-color: #f6f6f7;
+  border-radius: 14px;
+  padding: 28px 80px 56px;
+}
+
+.mapContainer {
+  position: relative;
+  min-height: 622px;
+}
+
+.worldMapImage {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.mapLegend {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  right: 70px;
+  bottom: 60px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 991px) {
+  .mainContent {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .twoColumnLayout {
+    flex-direction: column;
+  }
+
+  .leftColumn,
+  .rightColumn {
+    width: 100%;
+  }
+
+  .locationGroups {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .worldMapSection {
+    padding: 28px 20px 56px;
+  }
+
+  .mapLegend {
+    right: 20px;
+    bottom: 20px;
+  }
+}

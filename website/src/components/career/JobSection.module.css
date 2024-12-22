@@ -1,0 +1,143 @@
+.joinSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.joinTitle {
+  color: #8aa823;
+  text-align: center;
+  margin-top: 72px;
+  font:
+    700 40px Albert Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.joinSubtitle {
+  color: #000;
+  text-align: center;
+  margin-top: 21px;
+  font:
+    400 20px Montserrat,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.jobCard {
+  border-radius: 20px;
+  background-color: rgba(207, 254, 78, 0.35);
+  display: flex;
+  margin-top: 73px;
+  width: 100%;
+  flex-direction: column;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  padding: 23px 67px;
+}
+
+.jobContent {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.jobInfo {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+
+.jobTitle {
+  font-size: 36px;
+  font-weight: 700;
+  align-self: start;
+}
+
+.jobDescription {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.viewButton {
+  border-radius: 16px;
+  background-color: #023b3b;
+  align-self: end;
+  margin-top: 41px;
+  font-size: 14px;
+  color: #8aa823;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 8px 30px;
+  border: 2px solid #023b3b;
+  cursor: pointer;
+}
+
+.tagContainer {
+  align-self: start;
+  display: flex;
+  margin-top: 14px;
+  gap: 13px;
+  font-size: 14px;
+  color: #023b3b;
+  font-weight: 600;
+}
+
+.tag {
+  border-radius: 16px;
+  white-space: nowrap;
+  padding: 8px 36px;
+  border: 2px solid #023b3b;
+}
+
+.tagSmall {
+  border-radius: 16px;
+  padding: 8px 13px;
+  border: 2px solid #023b3b;
+}
+
+@media (max-width: 991px) {
+  .joinTitle {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .joinSubtitle {
+    max-width: 100%;
+  }
+
+  .jobCard {
+    max-width: 100%;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .jobContent {
+    max-width: 100%;
+  }
+
+  .jobInfo {
+    max-width: 100%;
+  }
+
+  .jobDescription {
+    max-width: 100%;
+  }
+
+  .viewButton {
+    margin-top: 40px;
+    white-space: initial;
+    padding: 0 20px;
+  }
+
+  .tag {
+    white-space: initial;
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,30 @@
+.mapImage {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.locationIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 29px;
+  margin: auto 0;
+}
+
+.officeIcon {
+  aspect-ratio: 0.96;
+  object-fit: contain;
+  object-position: center;
+  width: 22px;
+}
+
+.officeImage {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 93px;
+}

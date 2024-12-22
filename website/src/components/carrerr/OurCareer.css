@@ -1,0 +1,109 @@
+.career-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.career-header {
+  position: relative;
+  /* background: url('/path/to/your/image.jpg') center/cover no-repeat; */
+  height: 300px;
+}
+
+.header-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.career-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.career-content {
+  padding: 2rem;
+}
+
+.career-intro h2 {
+  color: #3f973f;
+}
+
+.job-opening {
+  margin-top: 2rem;
+}
+
+.icg-highlight {
+  color: #3f973f;
+}
+
+.job-card {
+  background: #f6f8e3;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.job-tags {
+  margin: 0.5rem 0;
+}
+
+.job-tag {
+  display: inline-block;
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.view-button {
+  padding: 0.5rem 1rem;
+  background: #3f973f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.view-button:hover {
+  background: #2e7d32;
+}
+
+.career-footer {
+  background: #00252e;
+  color: white;
+  padding: 2rem;
+}
+
+.footer-section h5 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer-links a {
+  color: #3f973f;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

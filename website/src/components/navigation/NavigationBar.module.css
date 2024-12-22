@@ -1,0 +1,260 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 38px;
+  background: #ffffff;
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  height: 106.58px;
+  top: 0.71px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+}
+
+.navLabel {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Keeps the text color consistent */
+}
+
+.logo {
+  width: 62px;
+  height: 75px;
+  object-fit: contain;
+  margin-left: 38px;
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 665px;
+  height: 42px;
+  margin-top: 32px;
+}
+
+.navLabel {
+  color: #023b3b;
+  font-family: "Albert Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+  text-align: left;
+  padding: 8px 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.43px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-right: 5px; /* Adjust the value as needed */
+  display: inline-block; /* Ensures it respects the margin */
+  cursor: pointer; /* Ensures it's clickable */
+}
+
+.navLabel:hover {
+  border-bottom: 2px solid green; /* Hover effect */
+}
+
+.dropdown-caret {
+  display: inline-block; /* Aligns the icon with the label */
+  margin-left: 5px;
+}
+
+/* Dropdown Menu Styling */
+.dropdownMenu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  background: #ffffff;
+  width: 100%;
+  max-width: 1425px;
+  height: 400px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(48, 49, 51, 0.15);
+  display: flex; /* Changed from 'none' to 'flex' */
+  padding: 90px 90px;
+  margin: 10px auto;
+  z-index: 2000;
+  opacity: 1;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  transform: translateY(10px);
+}
+
+.navItems:hover .dropdownMenu {
+  display: flex; /* Ensure dropdown is shown on hover */
+}
+
+/* Add a hidden state for animations */
+.dropdownMenu.hidden {
+  opacity: 0;
+  transform: translateY(-10px); /* Animates upward */
+  pointer-events: none; /* Prevents interaction when hidden */
+}
+
+.dropdownLeft {
+  flex: 1;
+  padding-right: 32px;
+}
+
+.dropdownRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: "Albert Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 38px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column; /* Arrange links vertically */
+  gap: 16px;
+  padding: 10px 20px;
+  background-color: #ffffff; /* Optional: distinguish the submenu */
+  border-left: 1px solid #ffffff; /* Separator for clarity */
+}
+
+.scrollableSubmenu {
+  max-height: 200px; /* Adjust the height as needed */
+  overflow-y: auto;
+}
+
+.dropdownTitle {
+  color: #023b3b;
+  font-family: "Albert Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.dropdownDescription {
+  color: #868686;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.dropdownLink {
+  color: #023b3b;
+  text-decoration: none;
+  font-family: "Albert Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  width: 180px;
+  cursor: pointer; /* Ensures it's clickable */
+}
+
+.dropdownLink:hover {
+  color: #8aa823;
+  border-bottom: 2px solid green; /* Hover effect */
+}
+
+/* Nav Actions */
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.iconGroup {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+}
+
+.stocksButton {
+  background-color: #8aa823;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0px 8px 27px rgba(162, 198, 64, 0.33);
+  transition: background-color 0.2s ease;
+}
+
+.stocksButton:hover {
+  background-color: #7a9520; /* Hover effect */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .navItems {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .dropdownMenu {
+    position: static;
+    width: 100%;
+    max-width: none;
+    box-shadow: none;
+    padding: 16px;
+    border-radius: 0;
+    height: auto;
+  }
+
+  .dropdownLeft {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .dropdownRight {
+    padding-top: 16px;
+  }
+
+  .dropdownRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 10px 20px;
+    background-color: #ffffff; /* Optional: distinguish the submenu */
+    border-left: 1px solid #ffffff; /* Separator for clarity */
+  }
+}
+
+.dropdownMenuSide {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  white-space: nowrap;
+}

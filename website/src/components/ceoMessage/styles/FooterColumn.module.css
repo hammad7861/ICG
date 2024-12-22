@@ -1,0 +1,35 @@
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: #fff;
+  font:
+    700 14px/1.5 DM Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.columnTitle {
+  font:
+    20px/1 Noto Sans,
+    sans-serif;
+}
+
+.titleUnderline {
+  margin-top: 11px;
+  width: 49px;
+  height: 2px;
+  border: 2px solid #fff;
+}
+
+.footerLink {
+  margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+  .footerColumn {
+    margin-top: 40px;
+  }
+}

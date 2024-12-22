@@ -1,0 +1,96 @@
+.adhesive-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.header-section {
+  background-image: url("/public/assets/adhesive.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 1288px;
+  height: auto;
+  margin-left: 42px;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.header-text h1 {
+  font-size: 48px;
+  margin: 0;
+  margin-top: 60px;
+}
+
+.content-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  text-align: justify;
+}
+
+.text-section {
+  flex: 1 1 45%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  text-align: justify;
+}
+
+.text-section h2,
+.text-section h3 {
+  color: #002b2b;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.text-section h4 {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  text-align: right; /* Align h4 content to the right */
+  font-weight: bold; /* Optional: Make h4 text bold */
+  color: #023b3b; /* Optional: Add a specific color for h4 */
+}
+
+.text-section p {
+  margin-bottom: 10px;
+}
+
+.text-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.text-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-section p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .header-section {
+    padding: 50px 20px;
+  }
+  .content-section {
+    padding: 20px;
+    gap: 10px;
+  }
+  .text-section h2,
+  .text-section h3 {
+    font-size: 24px;
+  }
+}

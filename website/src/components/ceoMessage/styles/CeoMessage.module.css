@@ -1,0 +1,302 @@
+.pageContainer {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.contentWrapper {
+  align-self: center;
+  display: flex;
+  margin-top: 46px;
+  width: 100%;
+  max-width: 1236px;
+  flex-direction: column;
+}
+
+.headerSection {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px 0;
+}
+
+.headerImage {
+  aspect-ratio: 2.9;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 12px;
+}
+.pageTitle {
+  color: #146400;
+  align-self: start;
+  margin: 90px 0 0 73px;
+  font:
+    700 50px/1 Albert Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.messageSection {
+  margin-top: 14px;
+  width: 100%;
+  padding: 0 54px 64px;
+  margin-bottom: 94px;
+}
+
+.messageContent {
+  gap: 20px;
+  display: flex;
+}
+
+.messageColumn {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 58%;
+}
+
+.quoteWrapper {
+  display: flex;
+  margin-top: -39px;
+  align-items: flex-start;
+  gap: 23px;
+  font-weight: 400;
+  flex-wrap: wrap;
+}
+
+.quoteSymbol {
+  color: #ffffff;
+  align-self: start;
+  font:
+    247px Alexandria,
+    sans-serif;
+}
+.messageText {
+  color: #000;
+  align-self: end;
+  margin-top: -120px;
+  flex-grow: 1;
+  font:
+    23px Albert Sans,
+    sans-serif;
+}
+
+.profileColumn {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 42%;
+  margin-left: 20px;
+}
+.profileContent {
+  display: flex;
+  margin-top: -86px;
+  flex-grow: 1;
+  flex-direction: column;
+  color: #023b3b;
+  text-align: center;
+  text-transform: uppercase;
+  font:
+    700 35px Times New Roman,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.headerImage {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: contain;
+  object-position: justify;
+  height: auto; /* Added to maintain aspect ratio */
+}
+
+.profileImage {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+  object-position: center;
+  height: auto; /* Added to maintain aspect ratio */
+  box-shadow: 0 12px 31px 9px rgba(0, 0, 0, 0.16);
+  border-radius: 50%;
+  object-fit: contain;
+  object-position: center;
+  height: auto; /* Added to maintain aspect ratio */
+}
+
+.footerLogo {
+  width: 102px;
+  object-fit: contain;
+  object-position: center;
+  height: auto; /* Added to maintain aspect ratio */
+}
+
+.ceoName {
+  align-self: center;
+  margin-top: 32px;
+}
+.footer {
+  background-color: #023b3b;
+  display: flex;
+  margin-top: 125px;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: start;
+  padding: 73px 65px 27px;
+}
+
+.footerContent {
+  display: flex;
+  width: 100%;
+  max-width: 1178px;
+  gap: 40px 100px;
+  flex-wrap: wrap;
+}
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font:
+    600 16px Poppins,
+    sans-serif;
+}
+
+.footerLogo {
+  aspect-ratio: 0.82;
+  object-fit: contain;
+  object-position: center;
+  width: 102px;
+}
+
+.socialText {
+  align-self: center;
+  margin-top: 43px;
+}
+
+.footerColumns {
+  align-self: start;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+.footerBottom {
+  display: flex;
+  margin-top: 103px;
+  width: 100%;
+  max-width: 1142px;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.8);
+  justify-content: end;
+  font:
+    500 14px Poppins,
+    sans-serif;
+}
+
+.footerDivider {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+}
+
+.footerInfo {
+  display: flex;
+  margin-top: 16px;
+  width: 100%;
+  align-items: end;
+  gap: 40px 100px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: start;
+  gap: 32px;
+  justify-content: end;
+}
+
+@media (max-width: 991px) {
+  .contentWrapper {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .headerSection {
+    max-width: 100%;
+  }
+
+  .headerImage {
+    max-width: 100%;
+  }
+
+  .pageTitle {
+    font-size: 40px;
+    margin: 40px 0 0 10px;
+  }
+
+  .messageSection {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .messageContent {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .messageColumn {
+    width: 100%;
+  }
+
+  .quoteWrapper {
+    margin-top: 40px;
+  }
+
+  .quoteSymbol {
+    font-size: 40px;
+  }
+
+  .messageText {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .profileColumn {
+    width: 100%;
+  }
+
+  .profileContent {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .profileImage {
+    max-width: 100%;
+  }
+
+  .footer {
+    max-width: 100%;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .footerContent {
+    max-width: 100%;
+  }
+
+  .socialText {
+    margin-top: 40px;
+  }
+
+  .footerBottom {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}

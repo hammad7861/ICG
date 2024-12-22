@@ -1,0 +1,201 @@
+.career {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.container {
+  align-self: center;
+  width: 100%;
+  max-width: 1236px;
+  margin-top: 46px;
+}
+
+.header {
+  position: relative;
+  min-height: 427px;
+  padding: 189px 80px 0 0;
+}
+
+.headerBg {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.title {
+  position: relative;
+  color: #fff;
+  margin-left: 185px;
+  font:
+    700 65px/0.8 Albert Sans,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.decorativeBox {
+  position: relative;
+  border-radius: 25px;
+  width: 210px;
+  margin-top: 53px;
+  padding-top: 41px;
+  border: 1px solid #fff;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+  margin-top: 37px;
+}
+
+.mainContent {
+  width: 59%;
+}
+
+.jobDetails {
+  color: #001833;
+  font:
+    400 16px Rubik,
+    sans-serif;
+}
+
+.jobTitle {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.section {
+  margin-top: 34px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.description {
+  line-height: 24px;
+}
+
+.sidebar {
+  width: 41%;
+}
+
+.summaryCard {
+  background-color: #f9f9f9;
+  border-color: #d4d4d4;
+  padding: 47px 80px 47px 32px;
+  font:
+    400 17px/24px Rubik,
+    sans-serif;
+}
+
+.applyButton {
+  border-radius: 8px;
+  background-color: #8aa823;
+  width: 180px;
+  color: #fff;
+  text-align: center;
+  padding: 14px 55px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.summaryTitle {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 68px;
+}
+
+.bulletContainer {
+  display: flex;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.bulletDot {
+  background-color: #001833;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: auto 0;
+}
+
+.bulletText {
+  flex: 1;
+}
+
+.summaryItem {
+  display: flex;
+  gap: 14px;
+  margin-top: 60px;
+}
+
+.summaryIcon {
+  width: 30px;
+  margin: auto 0;
+  object-fit: contain;
+}
+
+.summaryLabel {
+  color: #d4d4d4;
+}
+
+.summaryValue {
+  color: #001833;
+}
+
+.viewAllButton {
+  color: #001833;
+  font-weight: 500;
+  margin-top: 99px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .header {
+    padding: 100px 20px 0 0;
+  }
+
+  .title {
+    margin-left: 10px;
+    font-size: 40px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .mainContent,
+  .sidebar {
+    width: 100%;
+  }
+
+  .summaryCard {
+    padding: 20px;
+  }
+
+  .summaryTitle {
+    margin-top: 40px;
+  }
+
+  .viewAllButton {
+    margin-top: 40px;
+  }
+}
