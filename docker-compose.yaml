@@ -1,7 +1,7 @@
 services:
   frontend:
     build:
-      context: ./Client
+      context: ./dashboard
       dockerfile: Dockerfile
       args:
         VITE_TARGETED_URL: "http://localhost:3000/api"
@@ -16,7 +16,7 @@ services:
 
   backend:
     build:
-      context: ./
+      context: ./server
       dockerfile: Dockerfile
     environment:
       DATABASE_URL: "mongodb://admin:password@mongodb:27017/ICG?authSource=admin"
