@@ -1,0 +1,34 @@
+.richTextEditorContainer {
+  width: 100%;
+  max-height: 400px; /* Control vertical height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.quillEditor {
+  background-color: white;
+  width: 100%; /* Prevent exceeding the container width */
+  overflow-x: hidden; /* Ensure no horizontal overflow */
+}
+
+.quillEditor :global(.ql-editor) {
+  min-height: 200px;
+  max-height: 400px; /* Match container max height */
+  overflow-y: auto; /* Vertical scroll for content */
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word; /* Ensure words don’t overflow */
+  white-space: pre-wrap; /* Wrap long content properly */
+}
+
+.quillEditor :global(.ql-toolbar) {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  overflow-x: hidden; /* Prevent toolbar from overflowing */
+}
+
+.quillEditor :global(.ql-container) {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  overflow-x: hidden; /* Ensure container doesn’t overflow */
+}

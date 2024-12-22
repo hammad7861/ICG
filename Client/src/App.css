@@ -1,0 +1,152 @@
+.inter-regular {
+  font-family: 'Inter', serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+.inter-bold {
+  font-family: 'Inter', serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.inter-semibold {
+  font-family: 'Inter', serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: 'Poppins', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: 'Poppins', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.poppins-semibold {
+  font-family: 'Poppins', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.urbanist-regular {
+  font-family: 'Urbanist', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+.urbanist-bold {
+  font-family: 'Urbanist', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.urbanist-semibold {
+  font-family: 'Urbanist', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.urbanist-medium {
+  font-family: 'Urbanist', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+#sidebar .ant-menu-submenu-title {
+  padding-inline-end: 0px !important;
+  gap: 10px !important;
+}
+#sidebar .ant-menu-item {
+  gap: 10px !important;
+}
+#sidebar .ant-menu-item {
+  padding-left: 8px !important;
+}
+#sidebar .ant-menu-item-selected {
+  color: #ffffff;
+  background: #a6ce38;
+  padding-left: 25px !important;
+}
+#sidebar .ant-menu-title-content {
+  overflow: visible !important;
+}
+
+#search-input .ant-input-outlined:focus-within {
+  border: none !important;
+  background-color: #f2faff !important;
+  box-shadow: none !important;
+}
+#search-input .ant-input-outlined:focus {
+  border: none !important;
+  background-color: none !important;
+  box-shadow: none !important;
+}
+#search-input .ant-input-outlined:hover {
+  border: none !important;
+  background-color: #f2faff !important;
+  box-shadow: none !important;
+}
+
+.ant-select-selector {
+  border: none !important;
+  gap: 34px !important;
+}
+
+.ant-select-selection-item {
+  font-size: 10px !important;
+}
+
+.btn-green {
+  @apply bg-[#A6CE39] border-[0.5px] border-[#E8EBF2] h-[30px] text-[12px] leading-[15.629px] rounded-[4px] px-[11px] py-[7px] text-[#FFFFFF] flex items-center gap-x-[9px];
+}
+.btn-red {
+  @apply bg-[#FF4D40] h-[30px]  border-[0.5px] border-[#E8EBF2] text-[12px] leading-[15.629px] rounded-[4px] px-[11px] py-[7px] text-[#FFFFFF] flex items-center gap-x-[9px];
+}
+
+.child-container {
+  @apply bg-[#FFF] w-full h-full min-h-[calc(100vh-100px)] rounded-[12px] pl-[29px] pr-[44px] pt-[34px];
+}
+
+.ant-upload-drag {
+  border-radius: 17px !important;
+  border: 2px rgba(0, 0, 0, 0.13) !important;
+}
+
+.ant-upload-list-item {
+  display: none !important;
+}
+#add-product .ant-select {
+  border: 1px solid #062c42 !important;
+}
+
+.ant-upload-select {
+  width: 100% !important;
+}
+
+
+.area .apexcharts-toolbar{
+  display: none !important;
+}
+.area .apexcharts-xaxistooltip{
+  display: none !important;
+}
+.apexcharts-datalabels-group{
+  display: none !important;
+
+}
+
+.apexcharts-legend{
+  display: none !important;
+
+}

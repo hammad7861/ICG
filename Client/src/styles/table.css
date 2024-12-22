@@ -1,0 +1,53 @@
+.ant-table-cell {
+  background: #fff !important;
+}
+:where(.css-dev-only-do-not-override-1x0dypw).ant-table-wrapper
+  .ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(
+    .ant-table-row-expand-icon-cell
+  ):not([colspan])::before,
+:where(.css-dev-only-do-not-override-1x0dypw).ant-table-wrapper
+  .ant-table-thead
+  > tr
+  > td:not(:last-child):not(.ant-table-selection-column):not(
+    .ant-table-row-expand-icon-cell
+  ):not([colspan])::before {
+  height: 0px !important;
+}
+.ant-table-thead .ant-table-cell {
+  padding: 4px !important;
+  color: #003851 !important;
+  font-size: 15px !important;
+  font-family: 'Poppins', sans-serif;
+
+}
+.ant-table-row .ant-table-cell {
+  font-size: 14px !important;
+  color: #504e4e !important;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.ant-pagination-item{
+  display: none !important;
+}
+
+#table-pagination .ant-select-selector{
+  gap: 0px !important;
+  box-shadow: none !important;
+
+}
+#table-pagination .ant-select-outlined{
+  border: none !important;
+  box-shadow: none !important;
+}
+.ant-select-focused{
+  border: none !important;
+  box-shadow: none !important;
+
+}
+.ant-select-single{
+  border: none !important;
+  box-shadow: none !important;
+}

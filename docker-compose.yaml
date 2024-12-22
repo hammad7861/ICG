@@ -1,50 +1,50 @@
 services:
   frontend:
     build:
-      context: ./ICG # Adjust if frontend is in a different directory
-      dockerfile: Dockerfile # Make sure this points to the correct Dockerfile
+      context: ./Client
+      dockerfile: Dockerfile
       args:
         VITE_TARGETED_URL: "http://localhost:3000/api"
     environment:
       VITE_TARGETED_URL: "http://localhost:3000/api"
     ports:
-      - "8080:80" # Expose the frontend app on port 8080
+      - "8080:80"
     networks:
       - app-network
     depends_on:
-      - backend # Ensure backend is up before starting frontend
+      - backend
 
   backend:
     build:
-      context: ./ # Adjust if backend is in a different directory
-      dockerfile: Dockerfile # Make sure this points to the correct Dockerfile
+      context: ./
+      dockerfile: Dockerfile
     environment:
-      DATABASE_URL: "mongodb://admin:password@mongodb:27017/ICG?authSource=admin" # Use the name of the MongoDB service in the network
+      DATABASE_URL: "mongodb://admin:password@mongodb:27017/ICG?authSource=admin"
       JWT_KEY: "supersecretkey"
       APP_PORT: 3000
       NODE_ENV: "production"
     ports:
-      - "3000:3000" # Expose the backend app on port 3000
+      - "3000:3000"
     volumes:
       - ./:/usr/src/app
       - /usr/src/app/node_modules
     networks:
       - app-network
     depends_on:
-      - mongodb # Ensure MongoDB service is up before backend
+      - mongodb
 
   mongodb:
-    image: mongo:latest # Use the official MongoDB image
+    image: mongo:latest
     container_name: ICGmongodb
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: password
     volumes:
-      - mongodb-data:/data/db # Persistent MongoDB data
+      - mongodb-data:/data/db
     networks:
       - app-network
     ports:
-      - "27017:27017" # Expose MongoDB on the default port
+      - "27017:27017"
 
 networks:
   app-network:
