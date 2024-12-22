@@ -10,6 +10,7 @@ const {
     updateProductController,
     deleteProductController,
     publishProductController,
+    bulkCreateProductController,
   },
 } = require("../../controllers");
 
@@ -22,6 +23,7 @@ const {
     updateProductValidationSchema,
     deleteProductValidationSchema,
     publishProductValidationSchema,
+    bulkCreateProductValidationSchema,
   },
 } = require("../../validators");
 
@@ -71,6 +73,12 @@ productRouter.put(
   "/:productId/publish",
   [validateInputs(publishProductValidationSchema), sanitizeInputs()],
   publishProductController.publishProduct
+);
+
+productRouter.post(
+  "/bulk",
+  [validateInputs(bulkCreateProductValidationSchema), sanitizeInputs()],
+  bulkCreateProductController.bulkCreateProduct
 );
 
 productRouter.post(

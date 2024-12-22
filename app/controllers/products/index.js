@@ -5,6 +5,7 @@ const getProductsController = require("./getProductsController");
 const updateProductController = require("./updateProductController");
 const publishProductController = require("./publishProductController");
 const getFilteredProductsController = require("./getFilteredProductsController");
+const bulkCreateProductController = require("./bulkCreateProductController");
 
 module.exports = {
   createProductController,
@@ -14,4 +15,5 @@ module.exports = {
   deleteProductController,
   publishProductController,
   getFilteredProductsController,
+  bulkCreateProductController,
 };

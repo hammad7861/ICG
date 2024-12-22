@@ -1,5 +1,6 @@
 exports.ASSET_URL_TYPE = {
   userProfileImage: "User Profile Image",
+  contentBannerImage: "Content Banner Image",
   productBannerImage: "Product Banner Image",
   eventBannerImage: "Event Banner Image",
   mediaAndNewsBannerImage: "Media And News Banner Image",
@@ -14,6 +15,7 @@ exports.ASSET_URL_TYPE = {
 
 exports.ASSET_PATH_MAPPING = {
   [exports.ASSET_URL_TYPE.userProfileImage]: "images/profiles",
+  [exports.ASSET_URL_TYPE.contentBannerImage]: "images/contents/banners",
   [exports.ASSET_URL_TYPE.productBannerImage]: "images/products/banners",
   [exports.ASSET_URL_TYPE.eventBannerImage]: "images/events/banners",
   [exports.ASSET_URL_TYPE.mediaAndNewsBannerImage]:

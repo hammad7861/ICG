@@ -1,6 +1,7 @@
 const Article = require("./article");
 const Blog = require("./blog");
 const Brochure = require("./brochure");
+const Content = require("./content");
 const Event = require("./event");
 const Job = require("./job");
 const MediaAndNews = require("./mediaAndNews");
@@ -16,4 +17,5 @@ module.exports = {
   MediaAndNews,
   Product,
   User,
+  Content,
 };

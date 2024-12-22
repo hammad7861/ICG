@@ -41,11 +41,7 @@ const updateJobController = {
         published,
       };
 
-      console.log(updatePayload);
-
       const unsetPayload = { ...(!scheduled && { scheduled_date: "" }) };
-
-      console.log(unsetPayload);
 
       await update(Job, jobId, {
         $set: updatePayload,

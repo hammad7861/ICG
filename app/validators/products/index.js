@@ -5,6 +5,7 @@ const updateProductValidationSchema = require("./updateProductValidationSchema")
 const deleteProductValidationSchema = require("./deleteProductValidationSchema");
 const publishProductValidationSchema = require("./publishProductValidationSchema");
 const getFilteredProductsValidationSchema = require("./getFilteredProductsValidationSchema");
+const bulkCreateProductValidationSchema = require("./bulkCreateProductValidationSchema");
 
 module.exports = {
   createProductValidationSchema,
@@ -14,4 +15,5 @@ module.exports = {
   deleteProductValidationSchema,
   publishProductValidationSchema,
   getFilteredProductsValidationSchema,
+  bulkCreateProductValidationSchema,
 };

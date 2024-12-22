@@ -12,6 +12,7 @@ const blogRouter = require("./blog");
 const brochureRouter = require("./brochure");
 const jobRouter = require("./job");
 const externalRouter = require("./external");
+const contentRouter = require("./content");
 
 // Middlewares
 const { authMiddleware } = require("../middlewares");
@@ -27,5 +28,6 @@ router.use("/articles", articleRouter);
 router.use("/blogs", blogRouter);
 router.use("/brochures", brochureRouter);
 router.use("/jobs", jobRouter);
+router.use("/contents", contentRouter);
 
 module.exports = router;

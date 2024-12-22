@@ -17,8 +17,6 @@ const getFilteredProductsController = {
       const { page, limit, skip } = req.paginationValues;
       const { industryName, published } = req.sanitizedQuery || {};
 
-      console.log({ industryName, published });
-
       const filter = {
         ...(industryName && { industry_name: industryName }),
         ...(published && { published }),

@@ -25,7 +25,7 @@ const ProductSchema = new Schema(
     },
     industry_name: {
       type: String,
-      required: true,
+      required: false,
       trim: true,
     },
     molecular_formula: {
@@ -35,12 +35,12 @@ const ProductSchema = new Schema(
     },
     molecular_weight: {
       type: String,
-      required: true,
+      required: false,
       trim: true,
     },
     form: {
       type: String,
-      required: true,
+      required: false,
       trim: true,
     },
     details: {
@@ -49,15 +49,15 @@ const ProductSchema = new Schema(
     },
     MSDS: {
       type: String,
-      required: true,
+      required: false,
     },
     TDS: {
       type: String,
-      required: true,
+      required: false,
     },
     banner: {
       type: String,
-      required: true,
+      required: false,
     },
     published: {
       type: Boolean,
