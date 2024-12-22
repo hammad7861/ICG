@@ -1,5 +1,21 @@
 services:
-  frontend:
+  website:
+    build:
+      context: ./website
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8081"
+    networks:
+      - app-network
+    depends_on:
+      - backend
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8081"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  dashboard:
     build:
       context: ./dashboard
       dockerfile: Dockerfile
@@ -8,11 +24,16 @@ services:
     environment:
       VITE_TARGETED_URL: "http://localhost:3000/api"
     ports:
-      - "8080:80"
+      - "8080:8080"
     networks:
       - app-network
     depends_on:
       - backend
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8080"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
 
   backend:
     build:
@@ -26,7 +47,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./:/usr/src/app
+      - ./server:/usr/src/app
       - /usr/src/app/node_modules
     networks:
       - app-network
@@ -45,6 +66,26 @@ services:
       - app-network
     ports:
       - "27017:27017"
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    networks:
+      - app-network
+    depends_on:
+      website:
+        condition: service_started
+      dashboard:
+        condition: service_healthy
+      backend:
+        condition: service_started
+    volumes:
+      - ./website/dist:/usr/share/nginx/html/website
+      - ./dashboard/dist:/usr/share/nginx/html/dashboard
+    entrypoint: /bin/sh -c "wait-for-it dashboard:8080 --timeout=30 -- nginx -g 'daemon off;'"
 
 networks:
   app-network:

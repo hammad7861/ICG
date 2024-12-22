@@ -3,9 +3,14 @@ import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  server: {
-    port: 8080, // Set the Vite server port to 80 for production
-    host: true, // Expose the server to all network interfaces
-  },
+	plugins: [react()],
+	base: "/dashboard/",
+	server: {
+		port: 8080, // Set the Vite server port to 80 for production
+		host: true, // Expose the server to all network interfaces
+	},
+	preview: {
+		port: 8080,
+		host: true,
+	},
 });
