@@ -1,18 +1,17 @@
 const mongoose = require("mongoose");
+const { User } = require("../models");
 const url = require("../config").get("dbURL");
 
 async function connectDataBase() {
   try {
     await mongoose.connect(url, {
-      // Important configuration options
-      authSource: "admin", // If using authentication
-      serverSelectionTimeoutMS: 5000, // Timeout for server selection
-      socketTimeoutMS: 45000, // Socket timeout
-      family: 4, // Use IPv4, sometimes helps with connection issues
+      authSource: "admin",
+      serverSelectionTimeoutMS: 5000,
+      socketTimeoutMS: 45000,
+      family: 4,
     });
     console.log("🟢 Database Connected Successfully");
 
-    // Add error and disconnection event listeners
     mongoose.connection.on("error", (err) => {
       console.error("🔴 Mongoose Connection Error:", err);
     });
@@ -20,9 +19,33 @@ async function connectDataBase() {
     mongoose.connection.on("disconnected", () => {
       console.warn("🟠 Lost MongoDB Connection");
     });
+
+    const userEmail = "admin@icg.com";
+    const userName = "ICG Admin";
+    const userPassword = "12345678";
+
+    const user = await User.findOne({
+      email: userEmail,
+      archived: false,
+      deletedAt: null,
+    });
+
+    if (user) {
+      console.log("User already exists:", user);
+    } else {
+      const hashedPassword = await bcrypt.hash(userPassword, 10);
+
+      const newUser = new User({
+        name: userName,
+        email: userEmail,
+        password: hashedPassword,
+      });
+
+      await newUser.save();
+      console.log("🟢 New user created:", newUser);
+    }
   } catch (error) {
     console.error("🔴 Database Connection Failed:", error);
-    // Optionally exit the process
     process.exit(1);
   }
 }

@@ -4,13 +4,13 @@ services:
       context: ./website
       dockerfile: Dockerfile
     ports:
-      - "8081:80"
+      - "8081:80" # Nginx will serve the CRA app here
     networks:
       - app-network
     depends_on:
       - backend
     healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:80"]
+      test: ["CMD", "wget", "--spider", "-q", "http://nginx:80"]
       interval: 10s
       timeout: 5s
       retries: 3
@@ -24,13 +24,13 @@ services:
     environment:
       VITE_TARGETED_URL: "/api"
     ports:
-      - "8080:80"
+      - "8080:80" # Nginx will serve the Vite app here
     networks:
       - app-network
     depends_on:
       - backend
     healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:80"]
+      test: ["CMD", "wget", "--spider", "-q", "http://nginx:80/dashboard"]
       interval: 10s
       timeout: 5s
       retries: 3
@@ -72,7 +72,7 @@ services:
       context: ./nginx
       dockerfile: Dockerfile
     ports:
-      - "8083:80"
+      - "8083:80" # Nginx serves the frontends and proxies API requests
     networks:
       - app-network
     depends_on:
@@ -83,8 +83,12 @@ services:
       backend:
         condition: service_started
     volumes:
-      - ./website/build:/usr/share/nginx/html/website
-      - ./dashboard/dist:/usr/share/nginx/html/dashboard
+      - ./nginx/conf.d:/etc/nginx/conf.d # Nginx config directory for custom conf
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:80"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
 
 networks:
   app-network:
