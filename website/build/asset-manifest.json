@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.92d2a78c.css",
+    "main.js": "/static/js/main.4261b6f4.js",
+    "static/js/453.fe5ec64f.chunk.js": "/static/js/453.fe5ec64f.chunk.js",
+    "static/media/adhesive.png": "/static/media/adhesive.c4665b77857db2f9baf5.png",
+    "static/media/pexels-maltelu-2244746.png": "/static/media/pexels-maltelu-2244746.cdc636e2e864ac7cd2c1.png",
+    "static/media/image (2).png": "/static/media/image (2).91cbbad6537afe36a1b0.png",
+    "static/media/image.png": "/static/media/image.48febffe417f405ed0b9.png",
+    "static/media/availablestock.png": "/static/media/availablestock.fb2beecc6015da713c31.png",
+    "static/media/construction.png": "/static/media/construction.81f687c1040abfaf5f35.png",
+    "static/media/greenflex.png": "/static/media/greenflex.61d148f1f07a5c5fd3b0.png",
+    "index.html": "/index.html",
+    "main.92d2a78c.css.map": "/static/css/main.92d2a78c.css.map",
+    "main.4261b6f4.js.map": "/static/js/main.4261b6f4.js.map",
+    "453.fe5ec64f.chunk.js.map": "/static/js/453.fe5ec64f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.92d2a78c.css",
+    "static/js/main.4261b6f4.js"
+  ]
+}
