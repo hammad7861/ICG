@@ -10,12 +10,12 @@ import "./App.css";
 import AddProduct from "./pages/ProductDetails/AddProduct";
 // import EventDetails from "./pages/Events/EventDetails";
 // import AddEvent from "./pages/Events/AddEvent";
-import MediaAndNewsDetails from "./pages/MediaAndNews/MediaAndNewsDetails";
-import AddMediaAndNews from "./pages/MediaAndNews/AddMediaAndNews";
-import ArticleDetails from "./pages/Articles/ArticleDetails";
-import AddArticle from "./pages/Articles/AddArticle";
-import BlogDetails from "./pages/Blogs/BlogDetails";
-import AddBlog from "./pages/Blogs/AddBlog";
+// import MediaAndNewsDetails from "./pages/MediaAndNews/MediaAndNewsDetails";
+// import AddMediaAndNews from "./pages/MediaAndNews/AddMediaAndNews";
+// import ArticleDetails from "./pages/Articles/ArticleDetails";
+// import AddArticle from "./pages/Articles/AddArticle";
+// import BlogDetails from "./pages/Blogs/BlogDetails";
+// import AddBlog from "./pages/Blogs/AddBlog";
 import BrochureDetails from "./pages/Brochures/BrochureDetails";
 import AddBrochure from "./pages/Brochures/AddBrochure";
 import JobDetails from "./pages/Jobs/JobDetails";
@@ -25,10 +25,10 @@ import AddUser from "./pages/Users/AddUser";
 import ViewProductDetail from "./pages/ProductDetails/ViewProductDetail";
 import Dashboard from "./pages/Dashboard";
 import ViewJobDetail from "./pages/Jobs/ViewJobDetail";
-import ViewArticleDetail from "./pages/Articles/ViewArticleDetail";
-import ViewBlogDetail from "./pages/Blogs/ViewBlogDetail";
+// import ViewArticleDetail from "./pages/Articles/ViewArticleDetail";
+// import ViewBlogDetail from "./pages/Blogs/ViewBlogDetail";
 // import ViewEventDetail from "./pages/Events/ViewEventDetail";
-import ViewMediaAndNewsDetail from "./pages/MediaAndNews/ViewMediaAndNewsDetail";
+// import ViewMediaAndNewsDetail from "./pages/MediaAndNews/ViewMediaAndNewsDetail";
 import ViewBrochureDetail from "./pages/Brochures/ViewBrochureDetail";
 import Signin from "./pages/Auth/Signin";
 import ProtectedRoute from "./routes/ProtectedRoutes";
@@ -38,6 +38,7 @@ import BulkAddProduct from "./pages/ProductDetails/BulkAddProducts";
 import ContentDetails from "./pages/Content/ContentDetails";
 import AddContent from "./pages/Content/AddContent";
 import ViewContentDetail from "./pages/Content/ViewContentDetail";
+import ViewUserDetail from "./pages/Users/ViewUserDetail";
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -82,7 +83,7 @@ const router = createBrowserRouter(
           <Route path=":id" element={<ViewEventDetail />} />
           <Route path="add-event" element={<AddEvent />} />
         </Route> */}
-				<Route path="/mediaAndNews-details">
+				{/* <Route path="/mediaAndNews-details">
 					<Route
 						index
 						element={<MediaAndNewsDetails />}
@@ -95,8 +96,8 @@ const router = createBrowserRouter(
 						path="add-mediaAndNews"
 						element={<AddMediaAndNews />}
 					/>
-				</Route>
-				<Route path="/article-details">
+				</Route> */}
+				{/* <Route path="/article-details">
 					<Route
 						index
 						element={<ArticleDetails />}
@@ -109,7 +110,7 @@ const router = createBrowserRouter(
 						path="add-article"
 						element={<AddArticle />}
 					/>
-				</Route>
+				</Route> */}
 				<Route path="/content-details">
 					<Route
 						index
@@ -124,7 +125,7 @@ const router = createBrowserRouter(
 						element={<AddContent />}
 					/>
 				</Route>
-				<Route path="/blog-details">
+				{/* <Route path="/blog-details">
 					<Route
 						index
 						element={<BlogDetails />}
@@ -137,7 +138,7 @@ const router = createBrowserRouter(
 						path="add-blog"
 						element={<AddBlog />}
 					/>
-				</Route>
+				</Route> */}
 				<Route path="/brochure-details">
 					<Route
 						index
@@ -170,6 +171,10 @@ const router = createBrowserRouter(
 					<Route
 						index
 						element={<UserDetails />}
+					/>
+					<Route
+						path=":id"
+						element={<ViewUserDetail />}
 					/>
 					<Route
 						path="add-user"

@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const { User } = require("../models");
 const url = require("../config").get("dbURL");
+const bcrypt = require("bcrypt");
 
 async function connectDataBase() {
   try {
@@ -31,7 +32,7 @@ async function connectDataBase() {
     });
 
     if (user) {
-      console.log("User already exists:", user);
+      console.log("User already exists");
     } else {
       const hashedPassword = await bcrypt.hash(userPassword, 10);
 
@@ -42,7 +43,7 @@ async function connectDataBase() {
       });
 
       await newUser.save();
-      console.log("🟢 New user created:", newUser);
+      console.log("🟢 New user created");
     }
   } catch (error) {
     console.error("🔴 Database Connection Failed:", error);
