@@ -21,6 +21,8 @@ const bulkCreateProductController = {
         molecular_formula: product.molecularFormula,
         details: product.details,
         published: product.published,
+        molecular_weight: product.molecularWeight,
+        form: product.productForm,
       }));
 
       await create(Product, productDataArray);

@@ -5,12 +5,12 @@ const ProductSchema = new Schema(
   {
     cas_no: {
       type: String,
-      required: true,
+      required: false,
       trim: true,
     },
     chemical_name: {
       type: String,
-      required: true,
+      required: false,
       trim: true,
     },
     name: {
@@ -20,7 +20,7 @@ const ProductSchema = new Schema(
     },
     category_name: {
       type: String,
-      required: true,
+      required: false,
       trim: true,
     },
     industry_name: {
@@ -45,7 +45,7 @@ const ProductSchema = new Schema(
     },
     details: {
       type: String,
-      required: true,
+      required: false,
     },
     MSDS: {
       type: String,
